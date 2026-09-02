@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vetor Norte Multimarcas — Lanternagem e Pintura em Belo Horizonte</title>
+<meta name="description" content="Vetor Norte Multimarcas — funilaria, lanternagem e pintura automotiva em Santa Branca, Belo Horizonte. Multimarcas, nota 4,6 no Google com 131 avaliações. Orçamento pelo WhatsApp.">
+<meta property="og:title" content="Vetor Norte Multimarcas — Lanternagem e Pintura">
+<meta property="og:description" content="Funilaria e pintura automotiva multimarcas na Santa Branca, BH. Acabamento como era de fábrica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --laranja:#e8792e; --laranja-2:#f59a5a; --laranja-3:#c2611b;
+  --preto:#171310; --preto-2:#211a15; --preto-3:#2d241d;
+  --creme:#fbefe2; --branco:#fff; --nevoa:#f7f1ea;
+  --cinza:#6b6157; --cinza-claro:#e2d8cd;
+  --radius:16px; --radius-sm:12px;
+  --sombra:0 18px 50px -18px rgba(0,0,0,.5);
+  --sombra-sm:0 8px 24px -14px rgba(0,0,0,.35);
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--preto);background:var(--branco);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.slab{font-family:'Alfa Slab One',serif;font-weight:400;line-height:1.05;letter-spacing:.005em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-family:'Inter',sans-serif;
+  border:0;border-radius:999px;padding:15px 26px;cursor:pointer;font-size:clamp(15px,1.4vw,16px);
+  transition:transform .2s,box-shadow .2s,background .2s}
+.btn-wa{background:var(--laranja);color:#fff}
+.btn-wa:hover{background:var(--laranja-2);transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(232,121,46,.7)}
+.btn-ghost{background:transparent;color:var(--creme);border:2px solid rgba(251,239,226,.28)}
+.btn-ghost:hover{border-color:var(--laranja);color:var(--laranja)}
+.kicker{font-family:'Inter';font-weight:700;text-transform:uppercase;letter-spacing:.2em;
+  font-size:clamp(11px,1.3vw,13px);color:var(--laranja-3)}
+.sec{padding:clamp(56px,9vw,110px) 0}
+.sec-title{font-size:clamp(26px,4.4vw,42px)}
+.sec-sub{color:var(--cinza);max-width:640px;margin-top:16px;font-size:clamp(15px,1.7vw,18px)}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:900;background:rgba(23,19,16,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(251,239,226,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand .mark{width:52px;flex:0 0 auto}
+.brand .wm{font-family:'Alfa Slab One';color:var(--creme);font-size:clamp(15px,2vw,19px);line-height:1;
+  text-shadow:1px 1px 0 var(--laranja-3)}
+.brand .wm small{display:block;font-family:'Inter';font-weight:600;color:var(--laranja);font-size:10px;
+  letter-spacing:.14em;text-transform:uppercase;margin-top:5px;text-shadow:none}
+.nav-links{display:none;gap:26px;font-weight:600;font-size:15px;color:#e7ddd2}
+.nav-links a:hover{color:var(--laranja)}
+.nav .btn{padding:11px 20px;font-size:14px}
+@media(min-width:920px){.nav-links{display:flex}}
+
+/* HERO */
+.hero{position:relative;background:radial-gradient(130% 120% at 82% 10%,#3a2a1d 0%,var(--preto) 55%);color:var(--creme);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(135deg,rgba(232,121,46,.06) 0 2px,transparent 2px 24px);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(32px,5vw,56px);align-items:center;
+  padding:clamp(46px,7vw,88px) 0 clamp(52px,8vw,96px)}
+@media(min-width:920px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+.hero h1{font-size:clamp(30px,5.4vw,56px);margin:18px 0 0}
+.hero h1 em{color:var(--laranja);font-style:normal}
+.hero p.lead{margin-top:22px;font-size:clamp(16px,1.9vw,20px);color:#e3d6c8;max-width:560px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(251,239,226,.07);
+  border:1px solid rgba(251,239,226,.14);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600;color:#f0e6da}
+.chip .st{color:var(--laranja);font-weight:800}
+.hero-visual{position:relative;display:grid;place-items:center}
+.emblema{position:relative;width:100%;max-width:440px;aspect-ratio:1/.82;border-radius:var(--radius);
+  background:linear-gradient(160deg,var(--laranja-2),var(--laranja));box-shadow:var(--sombra);
+  border:1px solid rgba(0,0,0,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:34px;overflow:hidden}
+.emblema::after{content:"";position:absolute;inset:14px;border:2px solid rgba(23,19,16,.28);border-radius:10px;pointer-events:none}
+.emblema img{width:78%;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}
+.emblema .lbl{font-family:'Alfa Slab One';color:var(--preto);font-size:clamp(15px,2.6vw,20px);letter-spacing:.04em;text-align:center;z-index:1}
+.emblema .lbl small{display:block;font-family:'Inter';font-weight:700;font-size:11px;letter-spacing:.24em;margin-top:6px;color:var(--preto-3)}
+
+/* PROVA */
+.prova{background:var(--laranja);color:var(--preto)}
+.prova .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(16px,4vw,54px);padding:26px 0;text-align:center}
+.prova .num{font-family:'Alfa Slab One';font-size:clamp(28px,4.4vw,42px);line-height:1}
+.prova .lbl{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
+.prova .div{width:1px;height:46px;background:rgba(23,19,16,.25)}
+@media(max-width:560px){.prova .div{display:none}}
+
+/* SERVICOS */
+.servicos{background:var(--nevoa)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:44px}
+.card{background:#fff;border:1px solid var(--cinza-claro);border-radius:var(--radius);padding:26px 24px;
+  transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column;gap:12px}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sombra-sm);border-color:var(--laranja)}
+.card .ic{width:50px;height:50px;border-radius:14px;background:var(--preto);color:var(--laranja);display:grid;place-items:center;font-size:24px}
+.card h3{font-size:19px}
+.card p{color:var(--cinza);font-size:15px}
+.card .go{margin-top:auto;font-weight:700;color:var(--laranja-3);font-size:14px}
+.nota-serv{margin-top:26px;font-size:14px;color:var(--cinza)}
+
+/* SOBRE */
+.sobre-grid{display:grid;grid-template-columns:1fr;gap:clamp(28px,5vw,54px);align-items:center}
+@media(min-width:900px){.sobre-grid{grid-template-columns:1.05fr .95fr}}
+.sobre-emblema{border-radius:var(--radius);background:linear-gradient(160deg,var(--preto-2),var(--preto));
+  box-shadow:var(--sombra);padding:44px;display:grid;place-items:center;aspect-ratio:4/3}
+.sobre-emblema img{width:74%}
+.destaques{display:grid;gap:16px;margin-top:26px}
+.dest{display:flex;gap:14px;align-items:flex-start}
+.dest .n{flex:0 0 auto;width:42px;height:42px;border-radius:11px;background:var(--laranja);color:#fff;
+  font-family:'Alfa Slab One';display:grid;place-items:center}
+.dest b{font-family:'Alfa Slab One';font-weight:400;font-size:16px}
+.dest p{color:var(--cinza);font-size:15px}
+
+/* COMO */
+.como{background:var(--preto);color:var(--creme)}
+.como .sec-sub{color:#c9bcae}
+.passos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:46px}
+.passo{background:var(--preto-2);border:1px solid rgba(251,239,226,.08);border-radius:var(--radius);padding:28px 24px}
+.passo .p{font-family:'Alfa Slab One';font-size:34px;color:var(--laranja);line-height:1}
+.passo h3{margin:12px 0 8px;font-size:18px}
+.passo p{color:#c9bcae;font-size:15px}
+
+/* LOCAL */
+.local-grid{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,40px)}
+@media(min-width:900px){.local-grid{grid-template-columns:1fr 1.1fr}}
+.info-box{display:grid;gap:20px}
+.info-item{display:flex;gap:14px;align-items:flex-start}
+.info-item .ic{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:var(--nevoa);color:var(--laranja-3);display:grid;place-items:center;font-size:20px}
+.info-item b{font-family:'Alfa Slab One';font-weight:400;font-size:15px}
+.info-item p,.info-item a{color:var(--cinza);font-size:15px}
+.info-item a:hover{color:var(--laranja-3)}
+.mapa{border-radius:var(--radius);overflow:hidden;box-shadow:var(--sombra-sm);border:1px solid var(--cinza-claro);min-height:320px}
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* CTA FINAL */
+.cta-final{background:radial-gradient(120% 130% at 20% 0%,#3a2a1d,var(--preto));color:var(--creme);text-align:center}
+.cta-final h2{font-size:clamp(26px,4.2vw,42px)}
+.cta-final p{color:#cec1b3;max-width:560px;margin:16px auto 30px;font-size:clamp(15px,1.8vw,18px)}
+
+/* FOOTER */
+footer{background:#100c09;color:#a99c8e;padding:44px 0 30px;font-size:14px}
+.foot-top{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(251,239,226,.08);padding-bottom:24px}
+.foot-brand{display:flex;align-items:center;gap:12px}
+.foot-brand .mark{width:50px}
+.foot-brand b{font-family:'Alfa Slab One';font-weight:400;color:var(--creme);font-size:17px}
+.foot-bottom{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;color:#7d7062}
+.foot-bottom a:hover{color:var(--laranja)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:950;width:60px;height:60px;border-radius:50%;
+  background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#topo">
+      <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPEAAAB0BAMAAACmmMlRAAAAGFBMVEXxlmf77+IAAAAAAAAAAAAAAAAAAAAAAAAEP1b5AAAACHRSTlMA/wAAAAAAACXRGJEAAAPCSURBVHja7VpRjuswCIQo/4H7H9LkBLyPNK0TOzbGqbNSX6RVu6tdT2eAAdsLMOxhQIpeJxj5SPR+ILIevx2IjEfiY9WOVX8AmZ7k/BgyPYYsDyEHBAKAeazMstmYRkU2xD0/tIdyxh2ShGG02qKRmY3LMIWwm4g+lNtbkv2ah8HgDBMAZADQdRnOWeP+PNbDwp+I83hkegIZAQDWBxxkf8Gfi/Me6R/hjPFW4389j9zT/WJ//hVkisI9vp69nLl/K+eZw3j7UumoKnRwZgYIAq857ibNrcDvt+RGxOZJn/UzvgXBntxuU5sPwVXxCY7taiV/4Ig1evZVnKSzl3Wj2pypIxUaYD1ki0BdbWR+q27hTHnncCQ4HdPb/TSSxqMB93SMgN/NsEIOdyVZFRlDoQPgN5GXYtej7yFjsSP2kJ56KHeRnnoot5L+HLfWkZfqfNNMGk2c0b7QzWov1YlLm+xQrMgobYvdt6+y0HEXVgkZ1dIk7DlGZuSkOyIHTLD1/guJ80CwjV4pNNvLia7njNKKdPFztGc3meo5ifKufaBb5J4c9bJ6aqAB+Xo5JX9JG5AzJXVF2ig3GquKCkzOpG1yq809S5QBVvLJTWA4DxOzATuze/JZ9urL7tiGZo/YCWlZbMiGGxQSQ8T65oPJxKkmt2k+wOPSk2XE+cp+dTKInRtNTiVd3Vdy0uNmg9hqcoli1wsBAi71jLCIjcYd7edMZnvz9tAsZwqGOfAYkVxdIUF4FRJSIstcL2Y16Yvp2Yq+USGERDv/XSye60o+XANEXCW/D56rYrcZO0OA/bSQX1x7j4IqNsYcT2iYy8tjht11so4AtNsyMmu9dc5esWMD5XfgkQCClhYgvUZWcMaGL7Mplx9zx7aU4Xi+35RNGWSr2CygwtvGQ6Vp4O+s54DwgT1VtAsZzWEm6LhMySCT2oqI0qTATrUlrwDSK4WO8aSVbuJ8bpAqERhXDM8QaCzlthzsgc3DZOP93ZykzQkrZJgggQoAn0zHdG6hl6O46Thg+zU+dYXafc7xxGByTWDb9YkmPbpj9rSagSIApv2I/MjHj104iQvUaFkV5AYv2P6xrnHqvkY+0Viah6F7TmgqkZacSHQPMtZ37+JP7snXp9ybPcojn5ap3WFkflRPMckhI4hd7O2Ddhy3Tn4TUhcg7dY/Xw8F1YEMAUBOhZi1F45ed3PX+VZOVO2qHDKuhafNa/n6pDZqVifYub4Z2D5GeerRlUKjPniIRrBMzdIMkkcuQCn2TLVVtQn6xmb38w9qLgBtaLROqgAAAABJRU5ErkJggg==" alt="Logo Vetor Norte — ponte">
+      <span class="wm">VETOR NORTE<small>Multimarcas · Lanternagem e Pintura</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">A oficina</a>
+      <a href="#como">Como funciona</a>
+      <a href="#local">Onde estamos</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Vetor%20Norte%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Multimarcas · Lanternagem e Pintura</span>
+      <h1>Seu carro <em>como era de fábrica</em> — lataria e pintura no ponto.</h1>
+      <p class="lead">Funilaria e pintura automotiva na Santa Branca, em BH. Avaliamos o dano, passamos o orçamento e devolvemos o carro com acabamento impecável.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Vetor%20Norte%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.87 11.87 0 010 5.92 11.93 11.93 0 0112.05 0a11.9 11.9 0 018.4 3.49 11.8 11.8 0 013.48 8.4c0 6.55-5.35 11.88-11.94 11.88a12 12 0 01-5.72-1.45L.06 24zM6.6 20.2l.36.22a9.9 9.9 0 005.05 1.38c5.48 0 9.94-4.44 9.94-9.9a9.85 9.85 0 00-2.9-7A9.79 9.79 0 0012.06 2C6.58 2 2.12 6.44 2.12 11.9a9.83 9.83 0 001.52 5.26l.24.38-1 3.63 3.72-.97zM9.1 6.9c-.22-.5-.46-.5-.67-.51h-.57c-.2 0-.52.07-.8.37s-1.05 1.02-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.1 3.35 5.17 4.57 2.55 1 3.07.8 3.63.75.55-.05 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35s-1.78-.88-2.05-.98c-.28-.1-.48-.15-.68.15s-.78.98-.95 1.18c-.18.2-.35.22-.65.07s-1.27-.47-2.42-1.5c-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53S9.3 7.4 9.1 6.9z"/></svg> Pedir orçamento no WhatsApp</a>
+        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><span class="st">4,6 ★</span> no Google</span>
+        <span class="chip"><span class="st">131</span> avaliações</span>
+        <span class="chip">Santa Branca · BH</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="emblema">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPEAAAB0BAMAAACmmMlRAAAAGFBMVEXxlmcUEQ8AAAAAAAAAAAAAAAAAAAAAAABiza59AAAACHRSTlMA/wAAAAAAACXRGJEAAAPCSURBVHja7VpRjuswCIQo/4H7H9LkBLyPNK0TOzbGqbNSX6RVu6tdT2eAAdsLMOxhQIpeJxj5SPR+ILIevx2IjEfiY9WOVX8AmZ7k/BgyPYYsDyEHBAKAeazMstmYRkU2xD0/tIdyxh2ShGG02qKRmY3LMIWwm4g+lNtbkv2ah8HgDBMAZADQdRnOWeP+PNbDwp+I83hkegIZAQDWBxxkf8Gfi/Me6R/hjPFW4389j9zT/WJ//hVkisI9vp69nLl/K+eZw3j7UumoKnRwZgYIAq857ibNrcDvt+RGxOZJn/UzvgXBntxuU5sPwVXxCY7taiV/4Ig1evZVnKSzl3Wj2pypIxUaYD1ki0BdbWR+q27hTHnncCQ4HdPb/TSSxqMB93SMgN/NsEIOdyVZFRlDoQPgN5GXYtej7yFjsSP2kJ56KHeRnnoot5L+HLfWkZfqfNNMGk2c0b7QzWov1YlLm+xQrMgobYvdt6+y0HEXVgkZ1dIk7DlGZuSkOyIHTLD1/guJ80CwjV4pNNvLia7njNKKdPFztGc3meo5ifKufaBb5J4c9bJ6aqAB+Xo5JX9JG5AzJXVF2ig3GquKCkzOpG1yq809S5QBVvLJTWA4DxOzATuze/JZ9urL7tiGZo/YCWlZbMiGGxQSQ8T65oPJxKkmt2k+wOPSk2XE+cp+dTKInRtNTiVd3Vdy0uNmg9hqcoli1wsBAi71jLCIjcYd7edMZnvz9tAsZwqGOfAYkVxdIUF4FRJSIstcL2Y16Yvp2Yq+USGERDv/XSye60o+XANEXCW/D56rYrcZO0OA/bSQX1x7j4IqNsYcT2iYy8tjht11so4AtNsyMmu9dc5esWMD5XfgkQCClhYgvUZWcMaGL7Mplx9zx7aU4Xi+35RNGWSr2CygwtvGQ6Vp4O+s54DwgT1VtAsZzWEm6LhMySCT2oqI0qTATrUlrwDSK4WO8aSVbuJ8bpAqERhXDM8QaCzlthzsgc3DZOP93ZykzQkrZJgggQoAn0zHdG6hl6O46Thg+zU+dYXafc7xxGByTWDb9YkmPbpj9rSagSIApv2I/MjHj104iQvUaFkV5AYv2P6xrnHqvkY+0Viah6F7TmgqkZacSHQPMtZ37+JP7snXp9ybPcojn5ap3WFkflRPMckhI4hd7O2Ddhy3Tn4TUhcg7dY/Xw8F1YEMAUBOhZi1F45ed3PX+VZOVO2qHDKuhafNa/n6pDZqVifYub4Z2D5GeerRlUKjPniIRrBMzdIMkkcuQCn2TLVVtQn6xmb38w9qLgBtaLROqgAAAABJRU5ErkJggg==" alt="Marca Vetor Norte — ponte">
+        <div class="lbl">VETOR NORTE<small>MULTIMARCAS</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA -->
+<section class="prova">
+  <div class="wrap">
+    <div><div class="num">4,6 ★</div><div class="lbl">Nota no Google</div></div>
+    <div class="div"></div>
+    <div><div class="num">131</div><div class="lbl">Avaliações reais</div></div>
+    <div class="div"></div>
+    <div><div class="num">Multimarcas</div><div class="lbl">Todas as marcas e modelos</div></div>
+  </div>
+</section>
+
+<!-- SERVICOS -->
+<section class="sec servicos" id="servicos">
+  <div class="wrap">
+    <span class="kicker">O que fazemos</span>
+    <h2 class="sec-title" style="margin-top:12px">Lanternagem e pintura, do reparo ao acabamento</h2>
+    <p class="sec-sub">Funilaria e pintura automotiva para todas as marcas. Toque no serviço e fale direto no WhatsApp.</p>
+    <div class="cards">
+      <a class="card" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Quero%20saber%20sobre%20funilaria%20e%20lanternagem%20na%20Vetor%20Norte." target="_blank" rel="noopener">
+        <span class="ic">🔨</span><h3>Funilaria e lanternagem</h3>
+        <p>Reparo de lataria, amassados e batidas, recuperando a estrutura do veículo.</p>
+        <span class="go">Falar no WhatsApp →</span></a>
+      <a class="card" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Quero%20saber%20sobre%20pintura%20automotiva%20na%20Vetor%20Norte." target="_blank" rel="noopener">
+        <span class="ic">🎨</span><h3>Pintura automotiva</h3>
+        <p>Pintura completa ou parcial com acabamento fiel à cor original do carro.</p>
+        <span class="go">Falar no WhatsApp →</span></a>
+      <a class="card" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Meu%20carro%20sofreu%20uma%20batida%20e%20quero%20um%20or%C3%A7amento%20na%20Vetor%20Norte." target="_blank" rel="noopener">
+        <span class="ic">🚗</span><h3>Reparo de batidas</h3>
+        <p>Do risco ao para-choque, devolvemos a estética do veículo após colisões.</p>
+        <span class="go">Falar no WhatsApp →</span></a>
+      <a class="card" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Quero%20saber%20sobre%20polimento%20e%20acabamento%20na%20Vetor%20Norte." target="_blank" rel="noopener">
+        <span class="ic">✨</span><h3>Polimento e acabamento</h3>
+        <p>Brilho e proteção para a pintura ficar impecável depois do serviço.</p>
+        <span class="go">Falar no WhatsApp →</span></a>
+      <a class="card" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Atendem%20a%20minha%20marca%3F%20Quero%20um%20or%C3%A7amento%20na%20Vetor%20Norte." target="_blank" rel="noopener">
+        <span class="ic">🏭</span><h3>Multimarcas</h3>
+        <p>Atendemos todas as marcas e modelos, do popular ao importado.</p>
+        <span class="go">Falar no WhatsApp →</span></a>
+      <a class="card" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Quero%20uma%20avalia%C3%A7%C3%A3o%20e%20or%C3%A7amento%20na%20Vetor%20Norte." target="_blank" rel="noopener">
+        <span class="ic">📋</span><h3>Avaliação e orçamento</h3>
+        <p>Analisamos o dano e passamos o orçamento claro antes de iniciar o serviço.</p>
+        <span class="go">Falar no WhatsApp →</span></a>
+    </div>
+    <p class="nota-serv">✔ Manda uma foto do dano pelo WhatsApp que já adiantamos a avaliação.</p>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sec" id="sobre">
+  <div class="wrap sobre-grid">
+    <div>
+      <span class="kicker">A oficina</span>
+      <h2 class="sec-title" style="margin-top:12px">Referência em lataria e pintura na Santa Branca</h2>
+      <p class="sec-sub" style="margin-top:16px">A Vetor Norte é uma funilaria e pintura multimarcas em Belo Horizonte. A nota 4,6 no Google, com 131 avaliações de clientes reais, mostra o padrão do serviço: reparo bem feito, pintura fiel à cor e carro entregue no capricho.</p>
+      <div class="destaques">
+        <div class="dest"><span class="n">✓</span><div><b>Orçamento antes do serviço</b><p>Você aprova o valor e o que será feito antes de começar.</p></div></div>
+        <div class="dest"><span class="n">✓</span><div><b>Multimarcas</b><p>Do carro popular ao importado, atendemos todas as marcas.</p></div></div>
+        <div class="dest"><span class="n">✓</span><div><b>131 avaliações no Google</b><p>Reputação construída com serviço bem feito, avaliação por avaliação.</p></div></div>
+      </div>
+    </div>
+    <div class="sobre-emblema"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPEAAAB0BAMAAACmmMlRAAAAGFBMVEXxlmf77+IAAAAAAAAAAAAAAAAAAAAAAAAEP1b5AAAACHRSTlMA/wAAAAAAACXRGJEAAAPCSURBVHja7VpRjuswCIQo/4H7H9LkBLyPNK0TOzbGqbNSX6RVu6tdT2eAAdsLMOxhQIpeJxj5SPR+ILIevx2IjEfiY9WOVX8AmZ7k/BgyPYYsDyEHBAKAeazMstmYRkU2xD0/tIdyxh2ShGG02qKRmY3LMIWwm4g+lNtbkv2ah8HgDBMAZADQdRnOWeP+PNbDwp+I83hkegIZAQDWBxxkf8Gfi/Me6R/hjPFW4389j9zT/WJ//hVkisI9vp69nLl/K+eZw3j7UumoKnRwZgYIAq857ibNrcDvt+RGxOZJn/UzvgXBntxuU5sPwVXxCY7taiV/4Ig1evZVnKSzl3Wj2pypIxUaYD1ki0BdbWR+q27hTHnncCQ4HdPb/TSSxqMB93SMgN/NsEIOdyVZFRlDoQPgN5GXYtej7yFjsSP2kJ56KHeRnnoot5L+HLfWkZfqfNNMGk2c0b7QzWov1YlLm+xQrMgobYvdt6+y0HEXVgkZ1dIk7DlGZuSkOyIHTLD1/guJ80CwjV4pNNvLia7njNKKdPFztGc3meo5ifKufaBb5J4c9bJ6aqAB+Xo5JX9JG5AzJXVF2ig3GquKCkzOpG1yq809S5QBVvLJTWA4DxOzATuze/JZ9urL7tiGZo/YCWlZbMiGGxQSQ8T65oPJxKkmt2k+wOPSk2XE+cp+dTKInRtNTiVd3Vdy0uNmg9hqcoli1wsBAi71jLCIjcYd7edMZnvz9tAsZwqGOfAYkVxdIUF4FRJSIstcL2Y16Yvp2Yq+USGERDv/XSye60o+XANEXCW/D56rYrcZO0OA/bSQX1x7j4IqNsYcT2iYy8tjht11so4AtNsyMmu9dc5esWMD5XfgkQCClhYgvUZWcMaGL7Mplx9zx7aU4Xi+35RNGWSr2CygwtvGQ6Vp4O+s54DwgT1VtAsZzWEm6LhMySCT2oqI0qTATrUlrwDSK4WO8aSVbuJ8bpAqERhXDM8QaCzlthzsgc3DZOP93ZykzQkrZJgggQoAn0zHdG6hl6O46Thg+zU+dYXafc7xxGByTWDb9YkmPbpj9rSagSIApv2I/MjHj104iQvUaFkV5AYv2P6xrnHqvkY+0Viah6F7TmgqkZacSHQPMtZ37+JP7snXp9ybPcojn5ap3WFkflRPMckhI4hd7O2Ddhy3Tn4TUhcg7dY/Xw8F1YEMAUBOhZi1F45ed3PX+VZOVO2qHDKuhafNa/n6pDZqVifYub4Z2D5GeerRlUKjPniIRrBMzdIMkkcuQCn2TLVVtQn6xmb38w9qLgBtaLROqgAAAABJRU5ErkJggg==" alt="Marca Vetor Norte — ponte"></div>
+  </div>
+</section>
+
+<!-- COMO -->
+<section class="sec como" id="como">
+  <div class="wrap">
+    <span class="kicker">Simples assim</span>
+    <h2 class="sec-title" style="margin-top:12px;color:var(--creme)">Como funciona o atendimento</h2>
+    <p class="sec-sub">Do primeiro contato ao carro pronto, em três passos.</p>
+    <div class="passos">
+      <div class="passo"><div class="p">01</div><h3>Manda foto no WhatsApp</h3><p>Envie o dano por foto e conte o que aconteceu com o carro.</p></div>
+      <div class="passo"><div class="p">02</div><h3>Avaliação e orçamento</h3><p>Avaliamos o serviço e passamos o orçamento claro para você aprovar.</p></div>
+      <div class="passo"><div class="p">03</div><h3>Serviço feito, carro no capricho</h3><p>Executamos a lanternagem e a pintura e devolvemos o carro impecável.</p></div>
+    </div>
+    <div style="margin-top:40px"><a class="btn btn-wa" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Vetor%20Norte%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Começar pelo WhatsApp</a></div>
+  </div>
+</section>
+
+<!-- LOCAL -->
+<section class="sec" id="local">
+  <div class="wrap">
+    <span class="kicker">Onde estamos</span>
+    <h2 class="sec-title" style="margin-top:12px">Localização e contato</h2>
+    <div class="local-grid" style="margin-top:40px">
+      <div class="info-box">
+        <div class="info-item"><span class="ic">📍</span><div><b>Endereço</b><p>R. Joaquim Pereira, 28 — Santa Branca<br>Belo Horizonte · MG · CEP 31565-370</p><a href="https://www.google.com/maps?cid=7339741001995105822" target="_blank" rel="noopener" style="font-weight:700;color:var(--laranja-3)">Ver no Google Maps →</a></div></div>
+        <div class="info-item"><span class="ic">💬</span><div><b>WhatsApp</b><p><a href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Vetor%20Norte%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">(31) 99142-4071</a></p></div></div>
+        <div class="info-item"><span class="ic">🕗</span><div><b>Horário</b><p>De segunda a sábado.<br>Confirme o melhor horário pelo WhatsApp.</p></div></div>
+        <div class="info-item"><span class="ic">⭐</span><div><b>Avaliações</b><p>4,6 ★ com 131 avaliações no Google.</p></div></div>
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=R.%20Joaquim%20Pereira,%2028,%20Santa%20Branca,%20Belo%20Horizonte,%20MG&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da Vetor Norte"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="sec cta-final">
+  <div class="wrap">
+    <h2>Bateu, riscou ou quer repintar? A gente resolve.</h2>
+    <p>Manda uma foto no WhatsApp e receba a avaliação e o orçamento sem compromisso.</p>
+    <a class="btn btn-wa" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Vetor%20Norte%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.87 11.87 0 010 5.92 11.93 11.93 0 0112.05 0a11.9 11.9 0 018.4 3.49 11.8 11.8 0 013.48 8.4c0 6.55-5.35 11.88-11.94 11.88a12 12 0 01-5.72-1.45L.06 24zM6.6 20.2l.36.22a9.9 9.9 0 005.05 1.38c5.48 0 9.94-4.44 9.94-9.9a9.85 9.85 0 00-2.9-7A9.79 9.79 0 0012.06 2C6.58 2 2.12 6.44 2.12 11.9a9.83 9.83 0 001.52 5.26l.24.38-1 3.63 3.72-.97zM9.1 6.9c-.22-.5-.46-.5-.67-.51h-.57c-.2 0-.52.07-.8.37s-1.05 1.02-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.1 3.35 5.17 4.57 2.55 1 3.07.8 3.63.75.55-.05 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35s-1.78-.88-2.05-.98c-.28-.1-.48-.15-.68.15s-.78.98-.95 1.18c-.18.2-.35.22-.65.07s-1.27-.47-2.42-1.5c-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53S9.3 7.4 9.1 6.9z"/></svg> Pedir orçamento no WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPEAAAB0BAMAAACmmMlRAAAAGFBMVEXxlmf77+IAAAAAAAAAAAAAAAAAAAAAAAAEP1b5AAAACHRSTlMA/wAAAAAAACXRGJEAAAPCSURBVHja7VpRjuswCIQo/4H7H9LkBLyPNK0TOzbGqbNSX6RVu6tdT2eAAdsLMOxhQIpeJxj5SPR+ILIevx2IjEfiY9WOVX8AmZ7k/BgyPYYsDyEHBAKAeazMstmYRkU2xD0/tIdyxh2ShGG02qKRmY3LMIWwm4g+lNtbkv2ah8HgDBMAZADQdRnOWeP+PNbDwp+I83hkegIZAQDWBxxkf8Gfi/Me6R/hjPFW4389j9zT/WJ//hVkisI9vp69nLl/K+eZw3j7UumoKnRwZgYIAq857ibNrcDvt+RGxOZJn/UzvgXBntxuU5sPwVXxCY7taiV/4Ig1evZVnKSzl3Wj2pypIxUaYD1ki0BdbWR+q27hTHnncCQ4HdPb/TSSxqMB93SMgN/NsEIOdyVZFRlDoQPgN5GXYtej7yFjsSP2kJ56KHeRnnoot5L+HLfWkZfqfNNMGk2c0b7QzWov1YlLm+xQrMgobYvdt6+y0HEXVgkZ1dIk7DlGZuSkOyIHTLD1/guJ80CwjV4pNNvLia7njNKKdPFztGc3meo5ifKufaBb5J4c9bJ6aqAB+Xo5JX9JG5AzJXVF2ig3GquKCkzOpG1yq809S5QBVvLJTWA4DxOzATuze/JZ9urL7tiGZo/YCWlZbMiGGxQSQ8T65oPJxKkmt2k+wOPSk2XE+cp+dTKInRtNTiVd3Vdy0uNmg9hqcoli1wsBAi71jLCIjcYd7edMZnvz9tAsZwqGOfAYkVxdIUF4FRJSIstcL2Y16Yvp2Yq+USGERDv/XSye60o+XANEXCW/D56rYrcZO0OA/bSQX1x7j4IqNsYcT2iYy8tjht11so4AtNsyMmu9dc5esWMD5XfgkQCClhYgvUZWcMaGL7Mplx9zx7aU4Xi+35RNGWSr2CygwtvGQ6Vp4O+s54DwgT1VtAsZzWEm6LhMySCT2oqI0qTATrUlrwDSK4WO8aSVbuJ8bpAqERhXDM8QaCzlthzsgc3DZOP93ZykzQkrZJgggQoAn0zHdG6hl6O46Thg+zU+dYXafc7xxGByTWDb9YkmPbpj9rSagSIApv2I/MjHj104iQvUaFkV5AYv2P6xrnHqvkY+0Viah6F7TmgqkZacSHQPMtZ37+JP7snXp9ybPcojn5ap3WFkflRPMckhI4hd7O2Ddhy3Tn4TUhcg7dY/Xw8F1YEMAUBOhZi1F45ed3PX+VZOVO2qHDKuhafNa/n6pDZqVifYub4Z2D5GeerRlUKjPniIRrBMzdIMkkcuQCn2TLVVtQn6xmb38w9qLgBtaLROqgAAAABJRU5ErkJggg==" alt="Logo Vetor Norte">
+        <div><b>VETOR NORTE</b><br><span style="font-size:13px">Multimarcas · Lanternagem e Pintura</span></div>
+      </div>
+      <a class="btn btn-wa" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Vetor%20Norte%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+    <div class="foot-bottom">
+      <span>R. Joaquim Pereira, 28 · Santa Branca · BH</span>
+      <span>© Vetor Norte Multimarcas</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5531991424071?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Vetor%20Norte%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.87 11.87 0 010 5.92 11.93 11.93 0 0112.05 0a11.9 11.9 0 018.4 3.49 11.8 11.8 0 013.48 8.4c0 6.55-5.35 11.88-11.94 11.88a12 12 0 01-5.72-1.45L.06 24zM6.6 20.2l.36.22a9.9 9.9 0 005.05 1.38c5.48 0 9.94-4.44 9.94-9.9a9.85 9.85 0 00-2.9-7A9.79 9.79 0 0012.06 2C6.58 2 2.12 6.44 2.12 11.9a9.83 9.83 0 001.52 5.26l.24.38-1 3.63 3.72-.97zM9.1 6.9c-.22-.5-.46-.5-.67-.51h-.57c-.2 0-.52.07-.8.37s-1.05 1.02-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.1 3.35 5.17 4.57 2.55 1 3.07.8 3.63.75.55-.05 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35s-1.78-.88-2.05-.98c-.28-.1-.48-.15-.68.15s-.78.98-.95 1.18c-.18.2-.35.22-.65.07s-1.27-.47-2.42-1.5c-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53S9.3 7.4 9.1 6.9z"/></svg></a>
+
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Mecânica e Elétrica Forte — Oficina em Mantiqueira, Belo Horizonte</title>
+<meta name="description" content="Auto Mecânica e Elétrica Forte, na Mantiqueira em Belo Horizonte. Mecânica geral, elétrica automotiva, troca de óleo e câmbio automático. Desde 2015. Fale no WhatsApp.">
+<meta property="og:title" content="Auto Mecânica e Elétrica Forte — Belo Horizonte">
+<meta property="og:description" content="Seu carro em boas mãos desde 2015. Mecânica e elétrica automotiva na Mantiqueira, BH.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --preto:#0d0d10;
+    --preto-2:#16161b;
+    --preto-3:#1e1e25;
+    --vermelho:#e4121f;
+    --vermelho-2:#b60d18;
+    --branco:#ffffff;
+    --nevoa:#f5f5f7;
+    --cinza:#6b6b74;
+    --cinza-claro:#d3d5db;
+    --prata:#c9ced6;
+    --radius:16px;
+    --sombra:0 18px 50px -18px rgba(0,0,0,.45);
+    --sombra-sm:0 8px 24px -12px rgba(0,0,0,.35);
+    --max:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--preto);background:var(--branco);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4,.arch{font-family:'Archivo','Inter',sans-serif;line-height:1.05;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'Archivo';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermelho)}
+  .eyebrow.light{color:#ff5661}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Archivo';font-weight:800;font-size:clamp(15px,1.6vw,17px);letter-spacing:.01em;padding:16px 30px;border-radius:999px;cursor:pointer;border:0;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;text-align:center}
+  .btn-wa{background:#22c55e;color:#fff;box-shadow:0 12px 30px -10px rgba(34,197,94,.6)}
+  .btn-wa:hover{background:#1eb454;transform:translateY(-2px)}
+  .btn-red{background:var(--vermelho);color:#fff;box-shadow:0 12px 30px -12px rgba(228,18,31,.7)}
+  .btn-red:hover{background:var(--vermelho-2);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .wa-ico{width:20px;height:20px;flex:0 0 auto}
+
+  /* ---------- LOGO ---------- */
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-badge{width:46px;height:46px;flex:0 0 auto}
+  .logo-txt{font-family:'Archivo';font-weight:900;font-size:20px;letter-spacing:.02em;line-height:.95;color:#fff}
+  .logo-txt b{color:var(--vermelho)}
+  .logo-txt small{display:block;font-size:9px;font-weight:700;letter-spacing:.34em;color:var(--prata);margin-top:2px}
+  header .logo-txt{color:#fff}
+
+  /* ---------- HEADER ---------- */
+  header{position:sticky;top:0;z-index:900;background:rgba(13,13,16,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-weight:600;font-size:15px;color:var(--cinza-claro);transition:color .2s}
+  .nav-links a:hover{color:#fff}
+  .nav .btn{padding:11px 22px;font-size:14px}
+  .nav-cta-wrap{display:flex;align-items:center;gap:18px}
+  .menu-btn{display:none}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:var(--preto);color:#fff;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(120% 90% at 85% -10%, rgba(228,18,31,.35), transparent 55%),
+    radial-gradient(80% 70% at 10% 110%, rgba(228,18,31,.16), transparent 60%);z-index:0}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,64px);align-items:center;padding:clamp(56px,8vw,104px) 0}
+  .hero h1{font-size:clamp(38px,6.2vw,68px);font-weight:900;margin:18px 0 20px}
+  .hero h1 span{color:var(--vermelho)}
+  .hero .lead{font-size:clamp(17px,2vw,20px);color:var(--cinza-claro);max-width:34ch;margin-bottom:14px}
+  .hero .microcopy{font-size:14px;color:var(--cinza);margin-top:14px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .rating-inline{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:12px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px}
+  .rating-inline .stars{color:#ffc53d;font-size:18px;letter-spacing:2px}
+  .rating-inline b{font-family:'Archivo';font-size:20px}
+  .rating-inline small{color:var(--cinza-claro);font-size:13px;display:block;line-height:1.3}
+
+  /* hero visual card */
+  .hero-card{position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#1b1b22,#0c0c10);border:1px solid rgba(255,255,255,.1);box-shadow:var(--sombra);aspect-ratio:4/5;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;padding:28px}
+  .hero-card .grille{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 2px,transparent 2px 12px);opacity:.5;z-index:0}
+  .hero-card .badge-big{position:relative;z-index:1;align-self:flex-start}
+  .hero-card .badge-big svg{width:112px;height:112px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.5))}
+  .hero-card .card-foot{position:relative;z-index:1}
+  .hero-card .card-foot .k{font-family:'Archivo';font-weight:900;font-size:clamp(26px,4vw,40px);color:#fff;line-height:1}
+  .hero-card .card-foot .k b{color:var(--vermelho)}
+  .hero-card .card-foot p{color:var(--cinza-claro);font-size:14px;margin-top:8px}
+  .hero-card .est{position:absolute;top:28px;right:28px;z-index:1;font-family:'Archivo';font-weight:800;font-size:12px;letter-spacing:.14em;color:var(--prata);border:1px solid rgba(255,255,255,.2);padding:7px 12px;border-radius:999px}
+
+  /* ---------- STRIP ---------- */
+  .strip{background:var(--vermelho);color:#fff}
+  .strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(16px,5vw,60px);padding:18px 24px;text-align:center}
+  .strip div{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px}
+  .strip b{font-family:'Archivo';font-weight:800}
+  .strip svg{width:20px;height:20px;flex:0 0 auto}
+
+  /* ---------- SECTION BASICS ---------- */
+  section{padding:clamp(64px,9vw,110px) 0}
+  .sec-head{max-width:640px;margin-bottom:clamp(36px,5vw,56px)}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(30px,4.6vw,50px);font-weight:900;margin:14px 0 16px}
+  .sec-head p{font-size:clamp(16px,1.8vw,19px);color:var(--cinza)}
+
+  /* ---------- SERVICES ---------- */
+  .serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .serv{position:relative;background:var(--branco);border:1px solid #ececed;border-radius:var(--radius);padding:30px 26px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s;display:flex;flex-direction:column;gap:14px}
+  .serv:hover{transform:translateY(-4px);box-shadow:var(--sombra-sm);border-color:#e4121f33}
+  .serv .ico{width:52px;height:52px;border-radius:12px;background:var(--preto);display:flex;align-items:center;justify-content:center}
+  .serv .ico svg{width:26px;height:26px;stroke:var(--vermelho)}
+  .serv h3{font-size:20px;font-weight:800}
+  .serv p{font-size:15px;color:var(--cinza)}
+  .serv .link{margin-top:auto;font-family:'Archivo';font-weight:700;font-size:14px;color:var(--vermelho);display:inline-flex;align-items:center;gap:6px}
+  .serv .link svg{width:15px;height:15px;transition:transform .2s}
+  .serv:hover .link svg{transform:translateX(4px)}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--preto);color:#fff}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,72px);align-items:center}
+  .about h2{font-size:clamp(30px,4.6vw,50px);font-weight:900;margin:14px 0 20px}
+  .about p{color:var(--cinza-claro);font-size:clamp(16px,1.8vw,18px);margin-bottom:16px}
+  .about .pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .about .pill{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:10px 16px;font-weight:600;font-size:14px}
+  .about .pill svg{width:17px;height:17px;stroke:var(--vermelho)}
+  .about-visual{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:1/1;background:
+     radial-gradient(90% 90% at 70% 20%,rgba(228,18,31,.28),transparent 60%),linear-gradient(160deg,#1b1b22,#0a0a0d);
+     border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;box-shadow:var(--sombra)}
+  .about-visual svg.big-logo{width:min(62%,260px);height:auto;filter:drop-shadow(0 14px 30px rgba(0,0,0,.6))}
+  .about-visual .stamp{position:absolute;bottom:22px;left:22px;font-family:'Archivo';font-weight:900;font-size:13px;letter-spacing:.16em;color:var(--prata)}
+
+  /* ---------- STEPS ---------- */
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:step}
+  .step{position:relative;padding:32px 26px;background:var(--nevoa);border-radius:var(--radius);border:1px solid #ececef}
+  .step::before{counter-increment:step;content:"0" counter(step);font-family:'Archivo';font-weight:900;font-size:44px;color:var(--vermelho);opacity:.9;line-height:1;display:block;margin-bottom:14px}
+  .step h3{font-size:19px;font-weight:800;margin-bottom:8px}
+  .step p{font-size:15px;color:var(--cinza)}
+
+  /* ---------- LOCATION ---------- */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,48px);align-items:stretch}
+  .loc-info{display:flex;flex-direction:column;gap:22px}
+  .info-row{display:flex;gap:16px;align-items:flex-start}
+  .info-row .ico{width:46px;height:46px;flex:0 0 auto;border-radius:12px;background:var(--nevoa);display:flex;align-items:center;justify-content:center}
+  .info-row .ico svg{width:22px;height:22px;stroke:var(--vermelho)}
+  .info-row h4{font-family:'Archivo';font-size:16px;font-weight:800;margin-bottom:3px}
+  .info-row p{font-size:15px;color:var(--cinza)}
+  .info-row a p{color:var(--cinza)}
+  .hours-tb{width:100%;border-collapse:collapse;margin-top:4px}
+  .hours-tb td{padding:7px 0;font-size:15px;border-bottom:1px solid #eee}
+  .hours-tb td:last-child{text-align:right;font-weight:600}
+  .hours-tb .closed{color:var(--cinza)}
+  .hours-tb .open{color:#128a3e;font-weight:700}
+  .map-box{border-radius:var(--radius);overflow:hidden;min-height:360px;box-shadow:var(--sombra-sm);border:1px solid #ececef}
+  .map-box iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
+  /* ---------- FINAL CTA ---------- */
+  .final{background:var(--preto);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .final::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 120% at 50% 0%,rgba(228,18,31,.3),transparent 60%);z-index:0}
+  .final .wrap{position:relative;z-index:1}
+  .final h2{font-size:clamp(30px,5vw,54px);font-weight:900;margin-bottom:18px}
+  .final p{color:var(--cinza-claro);font-size:clamp(16px,2vw,20px);max-width:52ch;margin:0 auto 32px}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#08080b;color:var(--cinza-claro);padding:56px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+  footer h5{font-family:'Archivo';color:#fff;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+  footer p,footer a{font-size:14px;color:var(--cinza-claro);line-height:1.9}
+  footer a:hover{color:#fff}
+  .foot-bottom{padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--cinza)}.foot-bottom-left{display:flex;flex-wrap:wrap;gap:8px}.footer-credit{font-size:12px;opacity:.8}.footer-credit a{color:inherit;text-decoration:underline}
+  .foot-social{display:flex;gap:12px;margin-top:8px}
+  .foot-social a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center}
+  .foot-social svg{width:18px;height:18px;stroke:#fff}
+
+  /* ---------- FLOATING WA ---------- */
+  .fab{position:fixed;right:20px;bottom:20px;z-index:950;width:60px;height:60px;border-radius:50%;background:#22c55e;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px -8px rgba(34,197,94,.7);transition:transform .2s}
+  .fab:hover{transform:scale(1.07)}
+  .fab svg{width:32px;height:32px}
+  .fab .ping{position:absolute;inset:0;border-radius:50%;background:#22c55e;opacity:.5;animation:ping 2.4s cubic-bezier(0,0,.2,1) infinite;z-index:-1}
+  @keyframes ping{75%,100%{transform:scale(1.7);opacity:0}}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-card{max-width:420px;aspect-ratio:16/11;min-height:260px}
+    .about-grid{grid-template-columns:1fr}
+    .about-visual{aspect-ratio:16/10;order:-1}
+    .loc-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    .nav-links{display:none}
+    .nav .btn.desk{display:none}
+    .menu-btn{display:inline-flex}
+    .serv-grid{grid-template-columns:1fr 1fr}
+    .steps-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:520px){
+    .serv-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .hero-cta{flex-direction:column}
+    .hero-cta .btn{width:100%}
+    .rating-inline{width:100%}
+    .strip .wrap{gap:14px}
+  }
+
+  /* menu drawer */
+  .drawer{position:fixed;inset:0;z-index:999;background:rgba(8,8,11,.97);backdrop-filter:blur(6px);display:none;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+  .drawer.on{display:flex}
+  .drawer a{color:#fff;font-family:'Archivo';font-weight:700;font-size:24px}
+  .drawer .close{position:absolute;top:24px;right:24px;color:#fff;font-size:34px;line-height:1;background:none;border:0;cursor:pointer}
+
+  /* ---- logo (imagem real) ---- */
+  .logo-mark{display:block;border-radius:10px}
+  .logo-mark.head{height:50px;width:auto}
+  .logo-mark.hero{position:relative;z-index:1;width:120px;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.5)}
+  .logo-mark.about{width:min(66%,270px);border-radius:20px;box-shadow:0 14px 30px rgba(0,0,0,.6)}
+  .logo-mark.foot{height:60px;width:auto;border-radius:10px}
+</style>
+</head>
+<body><div class="kairos-disclaimer-top" style="background:#ffffff;color:#000000;font-size:12px;text-align:center;padding:8px 16px;line-height:1.5;position:relative;z-index:10000;">Demonstração de site criada pela Kairós TecnologIA, construída com os dados públicos da empresa achados na internet e de acesso restrito à ela. É apenas uma proposta e não representa o site oficial da empresa.</div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="logo" aria-label="Auto Mecânica e Elétrica Forte"><img class="logo-mark head" src="data:image/jpeg;base64,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" alt="Auto Forte Mecânica e Elétrica — logo"></a>
+    <nav class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">A oficina</a>
+      <a href="#como">Como funciona</a>
+      <a href="#local">Onde estamos</a>
+    </nav>
+    <div class="nav-cta-wrap">
+      <a class="btn btn-wa desk" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20servi%C3%A7o%20na%20Auto%20Forte." target="_blank" rel="noopener">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.08-1-.28-.1-.48-.15-.68.15-.2.3-.78 1-.96 1.2-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.7.3 1.27.48 1.7.62.72.23 1.37.2 1.88.12.58-.08 1.8-.73 2.05-1.44.25-.7.25-1.3.18-1.44-.07-.13-.27-.2-.57-.35z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.16l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        WhatsApp
+      </a>
+      <button class="btn btn-red menu-btn" id="openMenu" aria-label="Abrir menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="close" id="closeMenu" aria-label="Fechar">&times;</button>
+  <a href="#servicos">Serviços</a>
+  <a href="#sobre">A oficina</a>
+  <a href="#como">Como funciona</a>
+  <a href="#local">Onde estamos</a>
+  <a class="btn btn-wa" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20servi%C3%A7o%20na%20Auto%20Forte." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow light">● Oficina em Mantiqueira · Belo Horizonte</span>
+      <h1>Seu carro em <span>boas mãos</span> — do motor à parte elétrica.</h1>
+      <p class="lead">Mecânica e elétrica automotiva com diagnóstico honesto e serviço bem feito. Você entende o problema antes de pagar por ele.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20servi%C3%A7o%20na%20Auto%20Forte." target="_blank" rel="noopener">
+          <svg class="wa-ico" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.08-1-.28-.1-.48-.15-.68.15-.2.3-.78 1-.96 1.2-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.7.3 1.27.48 1.7.62.72.23 1.37.2 1.88.12.58-.08 1.8-.73 2.05-1.44.25-.7.25-1.3.18-1.44-.07-.13-.27-.2-.57-.35z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.16l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="rating-inline">
+        <span class="stars">★★★★☆</span>
+        <span><b>4,2</b> no Google<br><small>20 avaliações de clientes</small></span>
+      </div>
+      <p class="microcopy">Resposta pelo WhatsApp em poucos minutos, em horário comercial.</p>
+    </div>
+
+    <div class="hero-card">
+      <div class="grille"></div>
+      <span class="est">DESDE 2015</span>
+      <div class="badge-big">
+        <img class="logo-mark hero" src="data:image/jpeg;base64,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" alt="Auto Forte Mecânica e Elétrica — logo">
+      </div>
+      <div class="card-foot">
+        <div class="k">Mais de <b>10 anos</b> cuidando do seu carro</div>
+        <p>Atendimento próximo, direto com quem coloca a mão na massa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STRIP ===== -->
+<div class="strip">
+  <div class="wrap">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Mecânica <b>&amp;</b> elétrica no mesmo lugar</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberto <b>seg. a sex., 7h–17h</b></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg><span>Mantiqueira, <b>Belo Horizonte</b></span></div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Serviços da oficina</h2>
+      <p>Do diagnóstico ao reparo, cuidamos da mecânica e da parte elétrica do seu veículo. Toque em um serviço para falar direto no WhatsApp.</p>
+    </div>
+    <div class="serv-grid">
+
+      <a class="serv" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20mec%C3%A2nica%20geral." target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-.4-.4-2.1z"/></svg></span>
+        <h3>Mecânica geral</h3>
+        <p>Motor, suspensão, freios, embreagem e reparos em geral com serviço bem feito e peça de qualidade.</p>
+        <span class="link">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="serv" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20el%C3%A9trica%20automotiva." target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+        <h3>Elétrica automotiva</h3>
+        <p>Bateria, alternador, motor de partida, injeção, luzes e diagnóstico eletrônico — a especialidade da casa.</p>
+        <span class="link">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="serv" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20a%20troca%20de%20%C3%B3leo%20e%20filtros." target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s5 5.5 5 9a5 5 0 0 1-10 0c0-3.5 5-9 5-9z"/></svg></span>
+        <h3>Troca de óleo e filtros</h3>
+        <p>Troca de óleo do motor e filtros no prazo certo, para o carro rodar protegido e sem surpresas.</p>
+        <span class="link">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="serv" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20trocar%20o%20fluido%20do%20c%C3%A2mbio%20autom%C3%A1tico." target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span>
+        <h3>Câmbio automático</h3>
+        <p>Troca do fluido da transmissão automática, mantendo a troca de marchas suave e prolongando a vida do câmbio.</p>
+        <span class="link">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="serv" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20a%20revis%C3%A3o%20do%20meu%20carro." target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span>
+        <h3>Revisão preventiva</h3>
+        <p>Checagem completa dos itens de segurança e desgaste antes de viagem ou como manutenção de rotina.</p>
+        <span class="link">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="serv" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20diagn%C3%B3stico%20do%20meu%20carro." target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></span>
+        <h3>Diagnóstico do problema</h3>
+        <p>Identificamos a causa antes de trocar peça. Você recebe a explicação clara e o orçamento sem compromisso.</p>
+        <span class="link">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-visual">
+      <img class="logo-mark about" src="data:image/jpeg;base64,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" alt="Auto Forte Mecânica e Elétrica — logo">
+      <span class="stamp">MANTIQUEIRA · BH</span>
+    </div>
+    <div>
+      <span class="eyebrow light">A oficina</span>
+      <h2>Desde 2015 no bairro, com carro entregue certo.</h2>
+      <p>A Auto Mecânica e Elétrica Forte nasceu na Mantiqueira e atende motoristas de Venda Nova e região há mais de uma década. Aqui mecânica e elétrica ficam sob o mesmo teto — você resolve tudo num lugar só, com quem realmente entende do assunto.</p>
+      <p>O jeito de trabalhar é simples: olhar o carro, explicar o que ele precisa e fazer só o necessário. Sem enrolação e sem serviço empurrado.</p>
+      <div class="pills">
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Mais de 10 anos de estrada</span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Diagnóstico antes do reparo</span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Atendimento direto pelo WhatsApp</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STEPS ===== -->
+<section id="como">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Simples assim</span>
+      <h2>Como funciona o atendimento</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <h3>Você chama no WhatsApp</h3>
+        <p>Conta o que está acontecendo com o carro. A gente já orienta e combina o melhor horário para você trazer.</p>
+      </div>
+      <div class="step">
+        <h3>Diagnóstico e orçamento</h3>
+        <p>Avaliamos o veículo, identificamos a causa e passamos o orçamento claro — você aprova antes de qualquer serviço.</p>
+      </div>
+      <div class="step">
+        <h3>Serviço feito e carro na mão</h3>
+        <p>Executamos o reparo com capricho e devolvemos o carro rodando como deve. Sem surpresa na conta.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px">
+      <a class="btn btn-red" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20servi%C3%A7o%20na%20Auto%20Forte." target="_blank" rel="noopener">Começar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="about" id="local" style="background:var(--nevoa);color:var(--preto)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Onde estamos</span>
+      <h2 style="color:var(--preto)">Localização e horários</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-info">
+        <div class="info-row">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span>
+          <div><h4>Endereço</h4><p>R. Luzia Salomão, 161A — Mantiqueira<br>Belo Horizonte / MG · CEP 31660-040</p></div>
+        </div>
+        <div class="info-row">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><h4>Telefone / WhatsApp</h4><a href="https://wa.me/5531989895705" target="_blank" rel="noopener"><p>(31) 98989-5705</p></a></div>
+        </div>
+        <div class="info-row">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+          <div><h4>Instagram</h4><a href="https://www.instagram.com/autoforte10/" target="_blank" rel="noopener"><p>@autoforte10</p></a></div>
+        </div>
+        <div class="info-row">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div style="flex:1">
+            <h4>Horário de funcionamento</h4>
+            <table class="hours-tb">
+              <tr><td>Segunda a sexta</td><td class="open">07:00 – 17:00</td></tr>
+              <tr><td class="closed">Sábado</td><td class="closed">Fechado</td></tr>
+              <tr><td class="closed">Domingo</td><td class="closed">Fechado</td></tr>
+            </table>
+          </div>
+        </div>
+        <a class="btn btn-red" style="align-self:flex-start" href="https://www.google.com/maps?cid=10305338880043056042" target="_blank" rel="noopener">Traçar rota no Google Maps</a>
+      </div>
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps?cid=10305338880043056042&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Auto Mecânica e Elétrica Forte"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow light">Vamos resolver</span>
+    <h2>Seu carro precisa de atenção? A gente cuida.</h2>
+    <p>Chame a Auto Forte no WhatsApp, descreva o problema e agende o melhor horário. Diagnóstico honesto e serviço bem feito, do jeito que você merece.</p>
+    <a class="btn btn-wa" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20servi%C3%A7o%20na%20Auto%20Forte." target="_blank" rel="noopener">
+      <svg class="wa-ico" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.08-1-.28-.1-.48-.15-.68.15-.2.3-.78 1-.96 1.2-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.7.3 1.27.48 1.7.62.72.23 1.37.2 1.88.12.58-.08 1.8-.73 2.05-1.44.25-.7.25-1.3.18-1.44-.07-.13-.27-.2-.57-.35z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.16l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      Chamar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="logo-mark foot" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCADOAM4DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD458FeHbDVtSutW12SW38OaSq3OpyxffkB/wBXbRf9NpW+Rf7vzN91DWf4p8RXfinxNcatdRw24bbFbWtv/qrWBBtjgjHZETCj8zyTW3411zTYrS08C+F7vz9B0mQyS3o/5il2eJLr/d/giX+FP9p3rjKkkbRRRVAFFFFABRRRQAUUUUAOVd/+x/t1YvtOu9PlRLu32CRfMjf7ySJ/fRhww9xVWt7RPEf9n2n9m6tY/wBraJI26SwmbZ5Z/wCekMnWKT/aHB/iVhSZRg0V1ureDo5NEl8SeEr46zosf/HwAmLvTc/8/MQ6L6SrlG9Vb5a5KhMTQUUUUxBRRRQBLDcSRb/L/i+8n8LfWmU2ipHcKKKKoQUUUUAWbP8A1v8AwGr9ULP/AFv/AAGr9BRj0UUUEhRRRQAUUUUAFFFFABRRRQAUUUUAaOi67q3hzWotV0K+msb6H/VzQt+YPYqRwVYFWHBGK7NLLwt8RVzpp0/wt4s/58d3kabqj/8ATJm+W1lP9xv3TfwmP7ted0VIFrUtN1LR9WuNJ1awurG+tpPKmtbiIpLG47Op5FVa7rT/ABvY6xodv4Z+IVvNqFjbx+RZavb/APIR05OyKW/18A/54ueP4GSsfxH4QvvD8MN/HcQapol23+havY/6mf8A2eeY5B3jcBx9OadwOdooopgFFFFABTqbRQBN9nkeF54/nRfvf7P1/wAelQ1Lb3E9pd+fBJ5Tr/Gn+entXQQ2WkeJQEsDBpOs/wDPs7bLa7/65sf9S/8Ast8h7Ffu1N7GnLfbcw7P/W/8Bq/Vb7Hd6fq01hf2k1vcQfLJFMux4z6EGrNUSY9FFFBIUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVr6H4j1PQftH2TZLaXa7bqwuV823uUHaSP2/hYYZeoYGsiipA37/AE/SdThe/wDDReI/8t9KuG3yQ/8AXNv+Wqf+Pr3B+9WBSq2z95/GtSzTfapfMn/1v9/+99f8aC/dfqQ0U6m1RAUUUUAFFFFAHQf8JFfalpNvpOpCC7+zY+zXsy/6RDGP+WXmd4/RW3bf4cd69ULP/W/8Bq/UlXuY9FFFUSFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA6im0qtsoASitO1sItWHkWhSG+/ht3bak3+4x6N/snr2PaqE0NxaXbwTwPFLG22SKZdrKR2IPIpJmk6XLZ9COiiimZlmz/1v/Aav1Qs/9b/wGr9BRj0UUUEhRRRQAUUUUAFFFO/2P42+6vegBtFel+GP2e/jV4xTzvD/AMM9flgb7s9xbfZov++5dor1fR/2BfjxqUW++PhjSf8Ar71Av/6Kjb+dAHy7RX2Dc/8ABPzxlaN5d18UvBNvJ/cmMyfzFZl/+wZ4+i/5A3xG8BanL/zy+2yRN9B8h60AfKNFe/8AiH9i/wDaH8PnzB4MTVof7+k30U3/AI4SrfpXjniTwb4w8IXf2TxX4X1fRJv7mo2clv8A+hAA0AYdFFFABRRRQAUUUUAFdRY6/purWsOmeMI5pYlXyrfV7fm6s/TP/PaIf3GO4fwsOh5eik1cqMpI3df8K3+gi3vN8F7pd3/x6ajafPBcY6gHqrj+KNwrr3FYVbvh3xZqfh37RbweTd6ddf8AH5pd8vm21yP9pf7w/hdSrr2atq68Kab4mtJdW+HpmleP97d+Hrht95a+rwn/AJeYh6qN6/xL/GZv3K5b/CcjZ/63/gNX6oWP+u/4DV+rJMeiiigk6r4d+B5/iL8Qrfwpa61pmjyzQzz/AG3VpfKto/KiaX95J/ADsxntXourfskfHvTP39p4J/t60YZjvdEvobuKT6YYN/47XiatIn+r/i+X8DWrofivxT4am8zw34l1fR3/AOoffS2//oDCgD0Efsy/tAN/zSjxP/34H/xVdn4b/Yg/aC13/j+8Oaf4fi/566tqEf8A6DFvavPoP2hfjpa2qwwfFrxhtX/qJSN/Pmud1r4lfEbxFF5HiHx94n1OH/nld6rNKnPsWxQB9SW/7LXwG+GH+nfHX456fLcR8/2Ro0ux/wD2eV/wVatf8NUfs/8AwqH2X4FfBCG4uY/+YvqaiB/++28yZ/8Avpa+KKKAPozxb+258e/E+77B4gsvDlux/wBVo1oqtj/rrJvf+VeP698UPiV4nkceIfH3ibU/M/5+dSmZP++d239K5eGZ7ebzE2f8DXI/I1s21/4duD/xM9GaL1ls5tn/AI62RUSny9LnZhsNCvo6ii/O9vvszEdzIcsfNP8Atc/zpq/JXWRaZ4Iuzga9d2pP/PeEH9avL4T8I/8AQ3p+S1yyx0I7p/cz3KPCmLra0p02v+vkf1Zg6V4z8YaAc6F4s13TP+vPUJov/QWr0HTP2n/jpptqbWT4g6hq1q3ElrrcEWoRyfUTI1YsPhbwQvM3iIy/9tkSpTb/AA0s2wZhdH/edv5VlLMofYhJ/I9ClwLiHrXxNKC86i/S5cvfin4M8UBx4z+DPhk3Df8AMR8KyS6LP/3wvmQH/v3XJavpHhu5/wBJ8Hvr0g3f8eOo2ib1/wC20R2v/wB8rXS/8Jd4KsD/AKHpAP8Au26j/wBCqvL8UBn/AEXRuP8AprJ/gKX13Ez+Cj97sb/6s5Hh/wDe8yTfaEXL8Tko/C3iGX7mkXY/7Z4/nT28JeJE/wCYPc/981tSfErWm/1dvaRf8BJ/rVb/AIWH4j/5723/AH4FLnx38sV82RLCcJw09vVk+6jH9Tn7nS9Ts/8Aj7sbmL/ejIqoQQcEV2kXxK1pf9dbWkv1QiiTxZ4e1Ugaz4ZjH/TW1ba1axr4mP8AEp/c/wDhjhrZTktb/dMZZ9pxa/FXOLorp5tE0HUz/wAU/rOyX/n1vf3Z/BulYF5Y3en3b2l/A8Uy/wAD100qqqbb9meFjcrr4V80rSj0lFpr71+T1K9S291cWN3Fd2lxPb3ELCSOWFijxuOhBHII9RUVFbHnHX6r4ms/FFoLvUdJ8rxH5n7zUrTESX0f8Rni+753T94m3dzuXd81ZFULP/W/8Bq/Ul7mPRRRVEBWnouh3+vXbwWEafKu5mf5QtZoBZgoGSeK9i8P6LeaB4VQWsKy38xVpv8AZ/8A1D9a8/McZ9WguX4ntc+x4M4Z/tvFtVr+ygrytv5JebPKtW0u70fVnsLvZ5q4+58y81Zh8NalceGJdd/c/ZY8/fb5uK6P4m25j160uv8AnpF/I1pasjaf8F7O2QFjME3Y/wBo76xWPnKlSmt5Nf8ABPVfCWGpZhmFCpfkoRco976ct/vOLtfDWp3fhm412PyfssOfvt83HXFT6F4R1XxBaPd2PkiJW8v963f8q6rWE/sj4N21ofllnCj8zvNcx4KS4k8bWUHmPs8zzG+b+6KqOKqzo1KidrN29EZ1cgwOEzLB4GrGUnUjHmSdnzS+TtY0ZPhtrqReZ51p8v8Atn/Cub0vSL/WLz7Jp0Hmv+i/U10fxC1G4fxc1tHPNsghRfvevP8AWt7wqv8AZ3wsu9QtP+Ps+Y3HtwPyrL63Wp4dVJ2bla2m1zrlw7lWLzipgcMpRp0VJzd7uSj20/zOdu/h34gt7Tzx9muP+mUT81zul6Xf6vrtjotinm317cx2sEX96R2Cqv8A30a7r4bfb5b2/upppxBt53t958/4V1/7Neh2/i39ubwukUW+0g1KXUvosCPKP/HgtdGEr1HWlSqWdrar8jyeIMpwVHL8PmGDjKHtHJcsnfbrsjrf+GBfjz/z08JJ/wBxV/8A41Xzpqvh3UtK8cX3hPy/tup2l++n7LHM3nTJJsxHxl8t93jmvt79orxj+zBqvxe8TR+Nbvx/e+KNOj+w/ZdPnZLHzoo/lQc/3uvvXlH7B3hzStd/apN/qphlm0fSZdQtEfvPvSLd/wABWRzXpnxLbZS0f9hv48arpFvd3Fr4f0mW4XdHp+p6lsuP++URgPpnjvXiHjbwP4o+HPja78J+MNJm0zVrT70T/MGB+66sOGVuzCvZfFGq/EL4i/8ABRIxg6h/bcPiv7JZW+45sreG4/8AHVWNdzfnXZ/8FCta0rUP2g9D0mx2NqGnaLtu5U6/vJWeKM/Rfm/7aUCOC+H37IHxa+JXw50zxtoP/CO2+maoGNt9uvzFIwWQp90Rt1Kcc1558UfhD47+DviaLRfHWk/YpbmMz28sUomhuEHXY6+nccEV+hnjbwB8Nbr4GfCH4IeOvHd34Vu2+yGxgsfkkv7mKHYy7tp8v55uvHzGvmP9u/xfruq/Hey8GanpJ0/T/Dtn/wAS9/P817xJtp8/2+5t2/7JoAytE/Yc+Nmu+H7HWbI+Flt723juY0m1Jw6pIu4bh5RwcVyfxV/Zd+JPwb8EL4o8Z3fh82Ul0loqWN6ZZGdwx+6Yx/cr3X9gaL+x/D3xP+I2pTv9l0uwjgX5s/cWSeT9Ejr4t1PVb/V9Sm1HU7ua4uZnadmllLfM3zd6Cj274c/sifFv4o/DnT/G/ho6BDpl/wCZ5H26+eKT5JDGTt8s/wAStivPPip8MfE/wl8e/wDCIeL7iwm1BbWO5/0K4M0ex87fmKj09K+7/Hsnwf8Ah3+x38MPh18X7vxHa209lBdRxeHv9cZ44t0u/wD2N1yfxr4L+KE3w9uPiXe/8KvOtHwz5cf2f+2WzcM+z58/8D6UDu7WONoooqSCzZ/63/gNX6oWf+t/4DV+gox6K6fXfCX2LSf+Ei0G+/tvw9u2/b0XY9u56R3MXJhf06o38LNXMUk7iasWdPuv7P1a3u/ISXyW3bH+62K1tS8Y67qGo+eL2S1/6ZQSFBWBXp/wB8I+H/GHxstLXxfYve+G9PsrzV9Wt0cpugt7Z5PvLgjLbB1FZzownJTkrs78PmmLw9F4ejUcYt3dtLtHGa54mu/EFpaQXcEP+jfxpnc31rS0vx9qOn6TDYXFjbXcUf8Aq/Nr3b4l/DH4PeHf2dfEWu+Dh/bur3fii2s9J1KKZ5I7KG4T7RHZp822SRIdvmHn5pKu/Hr4RfD7whrfhbwPo3h+10G6vdTstMu9eubLUov+WSefN507/ZZV3vu/dColhKM4ez5dEd1HiXMqOJli6dZ+0krN90u58za94k1LxBdo938iR/6uJPurUWhaxcaFqv8AaMECSttK/vfu17n8Xfh7LpvxCPws8I/A+fS1j1pNJ0jxJcfa/tWqyeru7eTIJP8AWfKnyLXaftD/AAtsNI+DHw50LwvNNqA0zWpfC8179uW7iubiWGKTzURHZYMyeb+74b5fmq1Qgoeyt7vY455tjJ4r69Ko3Vvfm6nyfqF9canq1xfXH+tmbc1a3h/xZqXh/fbw7Li3b/lhL/Svqj43fBv4PeE/hT468deENKH2fTDF4Xtbf7RITb6vFebbmb738UITH8qwrf4KeBD8cv8AhFDoE93L4V+H8Gu6joFvcy/aNd1TyFmaLuw3ecmRF/CvFFShCcPZtaBhs1xeFxP1yjUaqO7v67/eeAat481W/sPsNvbw2ELfe+z/AHvzrR+EnxY8Q/Bv4gHxn4XsdMu9Q+yyWmzUIXkRUfbkjaynd8vr616P4N+G3/Cz/j7BH4i+Glr4B0HRdOXUtd0+3ea0jki/5Z/8fUn7p5/3ca/Mv9+uV/aP8FaN4G/aC1DSvDelLpuj3dlZ6jZWUc/nJCk1urMgk3HeA/mfNnmilRhR/hqwZjm2LzKoquKqOTWiv09FsjzjxFrl/wCKPFmreJdV+e91S7mvrjZ8o8yVyzY9smr/AIH8ceJPh142svF/hDUn0/VbJv3cv3gwP3kdejqw6ivobTvhv4J8OfsN6b481bwTban4g1W01G7+33en6jcCJPM8m3/e27CGH+9+9ry39nDwLpnxC/aS8OeHNesf7Q0b97d38HzfvIYoWcr8nzcttHFanmnp99+3b8T5YZ7jTfCHgXSdcuI/Kl1y209jc/8Aj7kf99bhXzbfeIdW1XxbN4l1m7fU9TnuPtdzcXf737RJu3fP9a+ndO+HXgnxJ+1zNoVp8NIP7C0Lw3eavd6Na6fqdk94yxP5O6G5bzt26SD7u1WrC/Zl+Flve+OPGl9498H3s1x4W0qKeLS77TbuV4byWVfJZ7aHExwoc7V7c0FHA/Fj4+eOvi78QdG8Wa7HZaZfaLGFsotMjZEhKy+Zv+Zid27H5Cq3xj+NXiT43+KtP8QeLNJ0m0vrK1+ybtOjdPMTfu+fcx6En869c+Hdv4C8TftE/E4eLvhro2qaXp9jf65PNcG+tzZ/ZV+Y7JJPMTzZWG7zPmrd+BPgb4WfEK01jxh4s8B+FtIttW8Sab4f0fSrie8+zxv5O+4igdZN3nyJyu9tu+qKPD/B/wAefFfgf4DeJvhRoWm6T/ZniBpPtt+yyfav3kaxkKd237i/3e5ry6NvKlSTy9+1h8n8Ne1yeD/Blv8ABz4x+L/+EeubP7Br1tonh231CR/OsXe4keXf83zSLDHtOc1v/GnwBpvw50r/AIQ3w98H5tStPsViB49nF28l5dzor/6OUbyNjfNGsW1qkDak/b3+L8u3zPDfgh/L+Vd+nyt/7Vr558c+MdW+IXxG1XxlrsdtDqGozeZIlpHsjXCBQFXJwAAO9fQvxN+AXh3wN+yb9uGleZ410O6sJ9e1WK/WX/j781XtPJV28vyW8hdzBdzZr5YqpSuZhRRRUgWbP/W/8Bq/VCz/ANb/AMBq/QUQ6Lr+r+HNV+3aTefZ5dvlyDaHSaM9Y5I2ysiHurAiunOj6J46Jk8KRQ6Tr55bQTJ+5uj3+ySN3/6YOc/3Gb7tcNRU2BSJJ4Lizu5YLi3khljYxyRTJtdHHUEHkEelOt7q7tN/2S7mt/MjMUnkylNyN1Q46g9x0Ndhb+KNM8TWcWmePhN9pTEVt4ht133MPolwv/LzH/5ETsxHyVieIfC2p+HJrc3fk3Fpdr5lpqVo/m210nrHJ7d1OHXoyg0XBrsZi3l2tp9kS7nS3WTz1i807PM6b8dN2O/WrWqeIde1vyf7a1nU9Q8vPl/a7mSbbnrjexxWbRVEmtJ4n8Syy2ckniHVnex/49He9l3W/b9383y8f3cVUi1O/giSCC/uoolmW5VIpWAWUdJMA/fH97rVSigC5Nqupz2k0E+p3ssU832mSJp3KSS/89CM4Lf7XWnf23rX9uf21/a2of2j977b9pk87pj/AFmd3TjrVGigC/c63rV79r+16tqFx9t2Nd+bcyP9o2fd8zJ+bb23Zx2qC4vLu78r7Xdz3HkRiCPzpS/lxr0RM9FHYDgVXooA0/8AhIvEP9h/2L/bup/2Xt2/Yvtknk4znHl7tuM89Krafqd/pN39r0y/ubG4XK+bbztE+D15Ug1VooA1l8T+JU1xtW/4SHVv7RkXymvftsvnMnp5m7OPbNS2finxTBq81/B4l1qK7ucefcQ30qyzY6b23ZbHvWNSK2ygDoLW/u4ru4/0+9/0vK3L+e3+kBuSJOfmBPXdmrM2pXdvaQwWl/dRJFP9pjSKd1WOT/nomDw3+11rDW4pZLinzHZCtFQaEudRv2Nxavf3LxST+fJF57bZJP8AnoRnlv8Aa61K/iHXpNPt7F9d1N7S0YNb2/2uTZCR0KJuwhHbFUJG302oOMstqmpS/a/Mv7p/trbrv9+3+kEHdmTn5ju5+bPPNVKKKoAooooAs2f+t/4DV+qFn/rf+A1foKMeiiigkK3/AA/4rv8AQobiwMEOoaNd/wDH3pd380M3+36xyD+GRCHX1xwcCik1cadjrdQ8MWGpadLrXgi4mu7SOLzbvS7jH22x9T8v+ui/6aoOP41TvyVTWd5d6fqEV9YXc9pcQNujuIWKPGfUEciuguL3SPEqeddrBpOs9ftMS7La7b/poo4hf/aX5G7hfvUi7c/qczRUtxbz2l28E8bxSr/A9RVRDVtHuFFFFAgooooAKKKKACiinUAFG6iigAptOptABRRRQAUUUUAWbP8A1v8AwGr9ULP/AFv/AAGr9BRj0UUUEhRRRQAUUUUAWVut8SQT/vol+7/ej+h9PbpUDLTadUlube42inU2qICiiigAooooAKKKKACiiigAooooAKKKKACiiigCzZ/63/gNX6oWf+t/4DV+gobe2lheE3mjb9v/AC0spWzJD9Dx5i+/3vUd6yadSs2//fpIctRlFOptMgKKKKACiiigAp1NooAlkt54tkkkfySf6t/4W+hqKtbRtcfTD9nuLSHUNOl/19hcZ2N/tAj5o39HXn6jitm58HQanoVx4i8GTzanp9snm3thN/x/WCf35FH+sj/6ap8v99Uqb9y7djkKKKKogKKKKACiiigAooooAKKKKACnU2nUAWLP/Xf8Bq9VCz/1v/Aav0FGPRRRQSOptFFABRTqbQAUUUUAFFFFABVvTdU1PR9Wt9W0m/msb62bzYbi3bY8Z9iKqUUAeirL4W+JC4vn07wp4vk/5e/9RpeqP/00x8tpKf76/uW7iP71cVrmh6t4c1u40bXdMn06+tm2SW9yu1l9PqCOQwyGHIOKz67nQ/HFtPoMfhXx9Yza5oUH/HrNG4W+0n1+yyn/AJZ+sDfu27bG+epKOGorrfiF4Gu/h/42Ph+5v4b7NtFeQXESmPdFKgZNy87WweVBIB6Ma5KmnckKKKKYBRRRQAUUVe0XTJdb8RafpMMiQyXlxHbq7DIUscbjUgVNv7rzP4KZWhrFxaSamYbGBobKBvJgVj85A/jb/abqfyHArPpoqaUXoWbP/W/8Bq/VCz/1v/Aav0wP/9k=" alt="Auto Forte Mecânica e Elétrica — logo">
+        <p style="margin-top:14px;max-width:34ch">Oficina de mecânica e elétrica automotiva na Mantiqueira, Belo Horizonte. Seu carro em boas mãos desde 2015.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/autoforte10/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg></a>
+          <a href="https://wa.me/5531989895705" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.3-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Serviços</h5>
+        <p><a href="#servicos">Mecânica geral</a></p>
+        <p><a href="#servicos">Elétrica automotiva</a></p>
+        <p><a href="#servicos">Troca de óleo</a></p>
+        <p><a href="#servicos">Câmbio automático</a></p>
+        <p><a href="#servicos">Revisão preventiva</a></p>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <p>R. Luzia Salomão, 161A<br>Mantiqueira — Belo Horizonte / MG</p>
+        <p><a href="https://wa.me/5531989895705" target="_blank" rel="noopener">(31) 98989-5705</a></p>
+        <p>Seg. a sex., 07:00 – 17:00</p>
+      </div>
+    </div>
+    <div class="foot-bottom"><div class="foot-bottom-left">
+      <span>© 2026 Auto Mecânica e Elétrica Forte. Todos os direitos reservados.</span>
+      <span>Mantiqueira · Belo Horizonte / MG</span>
+    </div><span class="footer-credit">Criação: <a href="https://kairostecnologia.com.br" target="_blank" rel="noopener">Kairós TecnologIA</a></span></div>
+  </div>
+</footer><div class="kairos-disclaimer-bottom" style="background:#ffffff;color:#000000;font-size:12px;text-align:center;padding:8px 16px;line-height:1.5;position:relative;z-index:10000;">Demonstração de site criada pela Kairós TecnologIA, construída com os dados públicos da empresa achados na internet e de acesso restrito à ela. É apenas uma proposta e não representa o site oficial da empresa.</div><button id="kairosTopoBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo" title="Voltar ao topo" style="position:fixed;bottom:16px;left:50%;transform:translateX(-50%);width:40px;height:40px;border:none;border-radius:50%;background:var(--pri,var(--accent,var(--primary,var(--brand,var(--acc,var(--dark,#222))))));color:#fff;font-size:16px;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);display:none;align-items:center;justify-content:center;z-index:9999;transition:opacity .2s;font-family:inherit;">▲</button><script>(function(){var b=document.getElementById("kairosTopoBtn");if(b){window.addEventListener("scroll",function(){b.style.display=window.scrollY>300?"flex":"none";});}})();</script>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a class="fab" href="https://wa.me/5531989895705?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20servi%C3%A7o%20na%20Auto%20Forte." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="ping"></span>
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.08-1-.28-.1-.48-.15-.68.15-.2.3-.78 1-.96 1.2-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.7.3 1.27.48 1.7.62.72.23 1.37.2 1.88.12.58-.08 1.8-.73 2.05-1.44.25-.7.25-1.3.18-1.44-.07-.13-.27-.2-.57-.35z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.16l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+
+<script>
+  var d=document.getElementById('drawer');
+  document.getElementById('openMenu').onclick=function(){d.classList.add('on')};
+  document.getElementById('closeMenu').onclick=function(){d.classList.remove('on')};
+  d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('on')})});
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- TEMPLATE DO COMPARADOR — uso: substituir [{"nome": "Vieiracar", "slug": "vieiracar", "old": null, "motivo": "Sem site — presença só no Instagram (@vieiracardiagnostico). Nova versão com o logo, paleta vermelho/preto e serviços reais."}, {"nome": "Centro Automotivo Dias", "slug": "centro-automotivo-dias", "old": null, "motivo": "Redesenhado com a logo oficial e a paleta vermelho/preto/prata da marca."}, {"nome": "Torque Certo", "slug": "oficina-mecanica-torque-certo", "old": null, "motivo": "Sem site — presença só no Instagram (@ofc_torquecerto). Nova versão criada a partir do logo, fotos e serviços reais do perfil."}, {"nome": "Centro Automotivo DVC", "slug": "centro-automotivo-dvc", "old": null, "motivo": "Nao tinha site proprio (so Google/Instagram)"}, {"nome": "Samuka Car", "slug": "samuka-car", "old": null, "motivo": "Nao tinha site proprio (so Google/Instagram)"}, {"nome": "Diniz Estetica Automotiva", "slug": "diniz-estetica-automotiva", "old": null, "motivo": "Nao tinha site proprio (so link de WhatsApp)"}, {"nome": "SG CAR Mecanica Automotiva", "slug": "sg-car-mecanica-automotiva", "old": null, "motivo": "Nao tinha site proprio"}, {"nome": "Spaco do Carro Centro Automotivo", "slug": "spaco-do-carro-centro-automotivo", "old": null, "motivo": "Nao tinha site proprio"}, {"nome": "Auto Mecânica e Elétrica Forte", "slug": "auto-mecanica-e-eletrica-forte", "old": null, "motivo": "Não tinha site próprio (só Google/Instagram @autoforte10). Nova versão com o logo, paleta preto/vermelho e serviços reais — desde 2015."}] pelo array JSON e salvar como comparar.html na RAIZ da pasta conectada -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparador — Antes vs Depois</title>
+<style>
+  :root{--bg:#0f1420;--card:#1a2130;--ink:#e8ecf4;--muted:#8a97ad;--line:#2a3346;--old:#ef4444;--new:#22c55e;--blue:#3b82f6}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,'Segoe UI',Roboto,sans-serif;padding:20px;min-height:100vh}
+  h1{font-size:22px;margin:0 0 4px}
+  p.sub{color:var(--muted);margin:0 0 18px;font-size:14px}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .tab{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:9px 16px;border-radius:10px;cursor:pointer;font-size:14px;font-weight:600}
+  .tab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:900px){.cols{grid-template-columns:1fr}}
+  .col{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .chead{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line);font-size:13px;font-weight:700}
+  .chead .lb{display:flex;align-items:center;gap:8px}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .dot.o{background:var(--old)} .dot.n{background:var(--new)}
+  .chead a{color:#22d3ee;text-decoration:none;font-weight:600;font-size:12px}
+  .chead a:hover{text-decoration:underline}
+  iframe{width:100%;height:72vh;border:0;background:#fff;display:block}
+  .empty{height:72vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted);text-align:center;padding:20px}
+  .empty strong{color:var(--old);font-size:17px}
+  .hint{color:var(--muted);font-size:12px;margin-top:14px}
+</style>
+</head>
+<body>
+<h1>Antes vs Depois</h1>
+<p class="sub">Esquerda: site atual do cliente · Direita: nova versão criada pelo Claude. Se o site antigo não carregar aqui (alguns bloqueiam incorporação), use o link "abrir em nova aba".</p>
+<div class="tabs" id="tabs"></div>
+<div class="cols">
+  <div class="col">
+    <div class="chead"><span class="lb"><span class="dot o"></span>SITE ATUAL</span><a id="oldlink" href="#" target="_blank" rel="noopener">abrir em nova aba ↗</a></div>
+    <div id="oldwrap"></div>
+  </div>
+  <div class="col">
+    <div class="chead"><span class="lb"><span class="dot n"></span>NOVA VERSÃO</span><a id="newlink" href="#" target="_blank" rel="noopener">abrir em nova aba ↗</a></div>
+    <div id="newwrap"></div>
+  </div>
+</div>
+<p class="hint">Dica: para editar uma página, abra o arquivo <b>[cliente]-editor.html</b> na pasta sites/[cliente]/.</p>
+<script>
+var CLIENTES=[{"nome": "MSCAR Soluções Automotivas", "slug": "mscar-solucoes-automotivas", "old": null, "motivo": "Sem site próprio (Google/Instagram @mscarbh). Nova versão premium na paleta azul/cinza da fachada, com slider de 8 fotos reais do Instagram (suspensão, motor, oficina e carros preparados) e seção dedicada à fachada."}, {"nome": "Auto Car Soluções Automotivas", "slug": "auto-car-solucoes-automotivas", "old": null, "motivo": "Sem site próprio (Google/Instagram @solu.autocar). Nova versão premium com a logo, paleta preto/amarelo do mural e slider com fotos reais da fachada, oficina e equipe."}, {"nome": "Vieiracar", "slug": "vieiracar", "old": null, "motivo": "Sem site — presença só no Instagram (@vieiracardiagnostico). Nova versão com o logo, paleta vermelho/preto e serviços reais."}, {"nome": "Centro Automotivo Dias", "slug": "centro-automotivo-dias", "old": null, "motivo": "Redesenhado com a logo oficial e a paleta vermelho/preto/prata da marca."}, {"nome": "Torque Certo", "slug": "oficina-mecanica-torque-certo", "old": null, "motivo": "Sem site — presença só no Instagram (@ofc_torquecerto). Nova versão criada a partir do logo, fotos e serviços reais do perfil."}, {"nome": "Centro Automotivo DVC", "slug": "centro-automotivo-dvc", "old": null, "motivo": "Nao tinha site proprio (so Google/Instagram)"}, {"nome": "Samuka Car", "slug": "samuka-car", "old": null, "motivo": "Nao tinha site proprio (so Google/Instagram)"}, {"nome": "Diniz Estetica Automotiva", "slug": "diniz-estetica-automotiva", "old": null, "motivo": "Nao tinha site proprio (so link de WhatsApp)"}, {"nome": "SG CAR Mecanica Automotiva", "slug": "sg-car-mecanica-automotiva", "old": null, "motivo": "Nao tinha site proprio"}, {"nome": "Spaco do Carro Centro Automotivo", "slug": "spaco-do-carro-centro-automotivo", "old": null, "motivo": "Nao tinha site proprio"}, {"nome": "Auto Mecânica e Elétrica Forte", "slug": "auto-mecanica-e-eletrica-forte", "old": null, "motivo": "Não tinha site próprio (só Google/Instagram @autoforte10). Nova versão com o logo, paleta preto/vermelho e serviços reais — desde 2015."}, {"nome": "Oficina do Espanhol", "slug": "oficina-do-espanhol", "old": null, "motivo": "Sem site próprio (Google/WhatsApp). Nova versão premium com o mascote e a paleta amarelo/azul da fachada, e os serviços reais — mecânica em geral e preparações."}, {"nome": "Vetor Norte Multimarcas", "slug": "vetor-norte-multimarcas-lanternagem-e-pintura", "old": null, "motivo": "Sem site próprio. Nova versão premium na paleta laranja/preto e tipografia slab da placa, com a ponte como marca. Serviços reais de lanternagem e pintura multimarcas."}, {"nome": "World Garage", "slug": "world-garage", "old": null, "motivo": "Sem site próprio (só Instagram @oficinaworldgarage). Nova versão premium na paleta preto/vermelho/prata do logo, com tema de ar-condicionado e os serviços reais do Instagram."}, {"nome": "Car Fix", "slug": "car-fix-lanternagem-e-pintura", "old": null, "motivo": "Sem site próprio (só Instagram @carfixoficina). Nova versão premium clara na paleta vermelho/branco do logo, com a logo em script, fotos reais da fachada e da estrutura, e o diferencial de atender todas as seguradoras."}, {"nome": "Auto Mecânica Tosatti", "slug": "auto-mecanica-tosatti", "old": null, "motivo": "Redesenho premium na paleta azul/preto do logo do Instagram (@oficinatsa); mecânica geral + usinagem/retífica; serviços reais."}, {"nome": "Auto Setas BH", "slug": "auto-setas", "old": null, "motivo": "Redesenho premium na paleta laranja/preto do Instagram (@autosetasbh); especialista em chave de seta e elétrica automotiva."}, {"nome": "Ricardo Mr. Car", "slug": "ricardo-mr-car-mecanica-multimarcas", "old": null, "motivo": "Redesenho premium com a logo real (carro esportivo, preto/prata/vermelho); mecânica multimarcas nota 5,0."}, {"nome": "Auto Center Pampulha", "slug": "auto-center-pampulha", "old": null, "motivo": "Redesenho premium na paleta preto/amarelo do Instagram (@autocenterpampulha); funilaria, pintura e mecânica."}, {"nome": "TM Car", "slug": "tm-car", "old": null, "motivo": "Redesenho premium com a logo real (TM CAR vermelho/navy); mecânica em geral no Itapoã, nota 5,0."}, {"nome": "Oficina do Flávio", "slug": "oficina-do-flavio", "old": null, "motivo": "Redesenho premium com a logo M-SOM sobre o azul-marinho pedido pelo cliente; mecânica para carros, nota 4,5, Santa Branca."}, {"nome": "Clínica do Carro BH", "slug": "clinica-do-carro-bh", "old": null, "motivo": "Redesenho premium com a logo em brasão (preto/vermelho) e tema de clínica; oficina especializada com diagnóstico, Instagram @clinicadocarrobh."}, {"nome": "Autopam Centro Automotivo Pampulha", "slug": "autopam-centro-automotivo-pampulha", "old": null, "motivo": "Redesenho premium com a logo amarela/preta; pneus, alinhamento e mecânica; Instagram @autopampneus_."}, {"nome": "JC Estética Automotiva", "slug": "jc-estetica-automotiva", "old": null, "motivo": "Redesenho premium com a logo preta/dourada; estética e detalhamento (polimento, vitrificação, a domicílio); @jc_esteticasm."}, {"nome": "Loreco Oficina e Motopeças", "slug": "loreco-oficina-e-motopecas", "old": null, "motivo": "Redesenho premium com a logo real e foto da fachada; oficina de motos e motopeças, nota 4,8."}, {"nome": "ATOS Centro Automotivo", "slug": "atos-centro-automotivo", "old": null, "motivo": "Redesenho premium tema gelo/AC; especialista em ar-condicionado, auto portas e elétrica; WhatsApp confirmado."}, {"nome": "Lubrikar Service", "slug": "lubrikar-service", "old": null, "motivo": "Redesenho premium azul; troca de óleo e mecânica, nota 4,8 · 175; WhatsApp confirmado."}, {"nome": "FT Auto Reparo", "slug": "ft-auto-reparo", "old": null, "motivo": "Redesenho premium vermelho/preto; mecânica + peças e serviços, nota 4,6 · 148; WhatsApp confirmado."}, {"nome": "Bosch Santa Amélia", "slug": "bosch-santa-amelia", "old": null, "motivo": "Redesenho premium com a logo real e a paleta da marca (Instagram)."}, {"nome": "Sancar Oficina Especializada", "slug": "sancar", "old": null, "motivo": "Redesenho premium com a logo real e a paleta da marca (Instagram)."}, {"nome": "Top Car Pampulha", "slug": "top-car-pampulha", "old": null, "motivo": "Redesenho premium com a logo real e a paleta da marca (Instagram)."}, {"nome": "TECCAR Multimarcas", "slug": "teccar-multimarcas", "old": null, "motivo": "Redesenho premium com a logo real (vermelho/preto); mecânica multimarcas +30 anos."}, {"nome": "Centro Automotivo Classe A", "slug": "centro-automotivo-classe-a", "old": null, "motivo": "Redesenho premium na paleta preto/vermelho da logo oficial (10 anos de estrada, Jardim Atlântico/BH). Serviços reais do Google: injeção eletrônica, freios, revisão, diesel, airbag e ABS. Site antigo (classea.com.br) estava fora do ar."}, {"nome": "Macieirauto Peças", "slug": "macieirauto-pecas", "old": null, "motivo": "Sem site próprio (só Facebook). Nova versão premium na paleta laranja/preto da logo; auto peças + serviços automotivos, +20 anos no São João Batista/BH."}, {"nome": "Auto Grau Troca de Óleo", "slug": "auto-grau-troca-de-oleo", "old": null, "motivo": "Sem site próprio (só bit.ly). Nova versão premium na paleta laranja/amarelo/preto do logo, com fotos reais (fachada, bicos injetores, oficina), nota 4,9 · 75 no Google e o diferencial do dono fazer o serviço."}];
+var tabs=document.getElementById('tabs');
+CLIENTES.forEach(function(c,i){
+  var b=document.createElement('button');b.className='tab'+(i===0?' on':'');b.textContent=c.nome;
+  b.onclick=function(){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on')});b.classList.add('on');mostra(c)};
+  tabs.appendChild(b);
+});
+function mostra(c){
+  var ow=document.getElementById('oldwrap'),nw=document.getElementById('newwrap');
+  var ol=document.getElementById('oldlink'),nl=document.getElementById('newlink');
+  var novo='sites/bh/oficinas/'+c.slug+'/'+c.slug+'.html';
+  nw.innerHTML='<iframe src="'+novo+'"></iframe>';nl.href=novo;
+  if(c.old){ow.innerHTML='<iframe src="'+c.old+'"></iframe>';ol.href=c.old;ol.style.display='inline'}
+  else{ow.innerHTML='<div class="empty"><strong>Sem site para comparar</strong><span>'+(c.motivo||'')+'</span></div>';ol.style.display='none'}
+}
+if(CLIENTES.length)mostra(CLIENTES[0]);
+</script>
+</body>
+</html>
+<!--
+FORMATO DO ARRAY [{"nome": "Vieiracar", "slug": "vieiracar", "old": null, "motivo": "Sem site — presença só no Instagram (@vieiracardiagnostico). Nova versão com o logo, paleta vermelho/preto e serviços reais."}, {"nome": "Centro Automotivo Dias", "slug": "centro-automotivo-dias", "old": null, "motivo": "Redesenhado com a logo oficial e a paleta vermelho/preto/prata da marca."}, {"nome": "Torque Certo", "slug": "oficina-mecanica-torque-certo", "old": null, "motivo": "Sem site — presença só no Instagram (@ofc_torquecerto). Nova versão criada a partir do logo, fotos e serviços reais do perfil."}, {"nome": "Centro Automotivo DVC", "slug": "centro-automotivo-dvc", "old": null, "motivo": "Nao tinha site proprio (so Google/Instagram)"}, {"nome": "Samuka Car", "slug": "samuka-car", "old": null, "motivo": "Nao tinha site proprio (so Google/Instagram)"}, {"nome": "Diniz Estetica Automotiva", "slug": "diniz-estetica-automotiva", "old": null, "motivo": "Nao tinha site proprio (so link de WhatsApp)"}, {"nome": "SG CAR Mecanica Automotiva", "slug": "sg-car-mecanica-automotiva", "old": null, "motivo": "Nao tinha site proprio"}, {"nome": "Spaco do Carro Centro Automotivo", "slug": "spaco-do-carro-centro-automotivo", "old": null, "motivo": "Nao tinha site proprio"}, {"nome": "Auto Mecânica e Elétrica Forte", "slug": "auto-mecanica-e-eletrica-forte", "old": null, "motivo": "Não tinha site próprio (só Google/Instagram @autoforte10). Nova versão com o logo, paleta preto/vermelho e serviços reais — desde 2015."}] (JSON):
+[
+  {"nome":"Nome do Cliente","slug":"slug-do-cliente","old":"https://siteantigo.com.br/"},
+  {"nome":"Cliente Sem Site","slug":"outro-slug","old":null,"motivo":"Site fora do ar"}
+]
+Regras: novos clientes ENTRAM no array existente (ler o comparar.html atual e mesclar, nunca sobrescrever perdendo clientes antigos). Slug deve bater com a pasta sites/[slug]/[slug].html.
+-->

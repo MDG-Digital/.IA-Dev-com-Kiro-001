@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Depósito Venda Nova | Materiais de Construção em Venda Nova, BH</title>
+<meta name="description" content="Depósito Venda Nova — materiais de construção em Belo Horizonte. Cimento, areia, brita, tijolos, ferramentas, tintas e muito mais. Da fundação à pintura, com atendimento de verdade. 4,8★ no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#22325E; --navy-2:#1a2749; --navy-3:#2c3f74;
+  --orange:#EAA561; --orange-2:#E08A2A; --orange-ink:#7a4a12;
+  --cream:#FBF7F1; --line:#e7ded2; --ink:#20293f; --muted:#5c6580; --white:#fff;
+  --r:16px; --shadow:0 14px 40px rgba(34,50,94,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.1;color:var(--navy);font-weight:600}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:1rem;padding:.9rem 1.5rem;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:.2s;white-space:nowrap}
+.btn-cta{background:var(--orange-2);color:#fff;box-shadow:0 10px 24px rgba(224,138,42,.35)}
+.btn-cta:hover{background:#c9761f;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 10px 24px rgba(37,211,102,.32)}
+.btn-wa:hover{background:#1eb457;transform:translateY(-2px)}
+.kicker{font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:700;color:var(--orange-2)}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand .mark{width:46px;height:46px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;flex:none}
+.brand .mark img{width:34px;height:34px;object-fit:contain}
+.brand b{font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:1.05rem;line-height:1}
+.brand span{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
+.nav-links{display:flex;gap:1.6rem;align-items:center}
+.nav-links a{font-weight:500;color:var(--navy);font-size:.95rem}
+.nav-links a:hover{color:var(--orange-2)}
+.nav-cta{display:flex;align-items:center;gap:.8rem}
+.nav-phone{font-weight:700;color:var(--navy);font-size:1.05rem;white-space:nowrap}
+@media(max-width:900px){.nav-links{display:none}.nav-phone{display:none}}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-140px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,var(--orange) 0%,transparent 68%);opacity:.35}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center;padding:clamp(2.6rem,6vw,5rem) 0}
+.hero .kicker{color:var(--orange)}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5.2vw,3.5rem);font-weight:700;margin:.7rem 0 0}
+.hero h1 .hl{color:var(--orange);font-style:italic}
+.hero .sub{font-size:clamp(1.05rem,2.4vw,1.28rem);color:#e7ecff;font-weight:500;margin-top:1rem;max-width:34ch}
+.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
+.rating{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.7rem;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);padding:.6rem .95rem;border-radius:999px}
+.rating .stars{color:#ffca6b;font-size:1.05rem;letter-spacing:1px}
+.rating b{font-size:1.15rem}.rating small{color:#c3cbe6}
+.hero-media{position:relative}
+.hero-media img{border-radius:var(--r);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;width:100%}
+.hero-badge{position:absolute;left:-14px;bottom:-14px;background:var(--orange);color:var(--orange-ink);font-weight:700;padding:.7rem 1.1rem;border-radius:12px;box-shadow:var(--shadow);font-size:.95rem;line-height:1.2;max-width:200px}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-media{order:-1}.hero-badge{max-width:60%}}
+
+/* STRIP */
+.strip{background:var(--orange);color:var(--orange-ink)}
+.strip-in{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 2.2rem;padding:.85rem 0;font-weight:600;font-size:.95rem;text-align:center}
+.strip-in span{display:inline-flex;align-items:center;gap:.45rem}
+
+/* SECTION */
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+.sec-head{text-align:center;max-width:60ch;margin:0 auto 2.6rem}
+.sec-head h2{font-size:clamp(1.7rem,4vw,2.5rem)}
+.sec-head p{color:var(--muted);margin-top:.7rem;font-size:1.05rem}
+
+/* SLIDER */
+.slider-sec{background:var(--cream)}
+.slider{position:relative;max-width:940px;margin-inline:auto;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.slides{display:flex;transition:transform .5s ease}
+.slide{min-width:100%;position:relative}
+.slide img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.slide .cap{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1.3rem .95rem;background:linear-gradient(transparent,rgba(26,39,73,.86));color:#fff;font-weight:600;font-size:1.05rem;display:flex;align-items:center;gap:.55rem}
+.s-arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);border:none;cursor:pointer;display:grid;place-items:center;color:var(--navy);font-size:1.4rem;box-shadow:0 6px 18px rgba(0,0,0,.18);z-index:2;transition:.2s}
+.s-arrow:hover{background:#fff;transform:translateY(-50%) scale(1.07)}
+.s-arrow.prev{left:14px}.s-arrow.next{right:14px}
+.dots{display:flex;justify-content:center;gap:.5rem;padding:1rem 0 0}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--line);border:none;cursor:pointer;transition:.2s}
+.dot.active{background:var(--orange-2);width:28px;border-radius:6px}
+@media(max-width:560px){.slide .cap{font-size:.92rem}.s-arrow{width:38px;height:38px;font-size:1.1rem}}
+
+/* PRODUCTS */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.prod{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.3rem;transition:.2s}
+.prod:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--orange)}
+.prod .ic{width:48px;height:48px;border-radius:12px;background:var(--cream);display:grid;place-items:center;font-size:1.5rem;margin-bottom:.9rem}
+.prod h3{font-size:1.12rem;margin-bottom:.3rem}
+.prod p{color:var(--muted);font-size:.92rem}
+
+/* ABOUT */
+.about{background:var(--navy);color:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+.about h2{color:#fff;font-size:clamp(1.7rem,4vw,2.4rem)}
+.about .kicker{color:var(--orange)}
+.about p{color:#dfe4f5;margin-top:1rem;font-size:1.06rem}
+.feats{display:grid;gap:1rem;margin-top:1.6rem}
+.feat{display:flex;gap:.9rem;align-items:flex-start}
+.feat .fi{flex:none;width:40px;height:40px;border-radius:10px;background:rgba(234,165,97,.18);color:var(--orange);display:grid;place-items:center;font-size:1.2rem}
+.feat b{display:block;color:#fff}
+.feat small{color:#b9c1de;font-size:.92rem}
+.about-media img{border-radius:var(--r);box-shadow:var(--shadow);aspect-ratio:3/4;object-fit:cover}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}.about-media{max-width:420px;margin-inline:auto}}
+
+/* LOCAL */
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:stretch}
+.info-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.8rem;box-shadow:0 6px 20px rgba(34,50,94,.06)}
+.info-row{display:flex;gap:.9rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:none}
+.info-row .ir{flex:none;width:40px;height:40px;border-radius:10px;background:var(--cream);display:grid;place-items:center;font-size:1.2rem}
+.info-row b{color:var(--navy);display:block;font-size:.98rem}
+.info-row span{color:var(--muted);font-size:.95rem}
+.info-card .btn{margin-top:1.3rem;width:100%;justify-content:center}
+.map{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);min-height:360px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+@media(max-width:820px){.local-grid{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:var(--navy-2);color:#cfd6ee;padding:3rem 0 2rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.foot-brand .mark{width:46px;height:46px;border-radius:12px;background:#fff;display:grid;place-items:center;overflow:hidden}
+.foot-brand .mark img{width:34px;height:34px;object-fit:contain}
+.foot-brand b{color:#fff;font-family:'Fraunces',serif;font-size:1.1rem}
+footer h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.9rem}
+footer a:hover{color:var(--orange)}
+footer p,footer li{font-size:.94rem;margin-bottom:.5rem;list-style:none}
+.copy{text-align:center;padding-top:1.5rem;font-size:.85rem;color:#9aa4c9}
+@media(max-width:720px){.foot-grid{grid-template-columns:1fr;gap:1.5rem}}
+
+/* FLOAT CALL */
+.float-call{position:fixed;right:18px;bottom:18px;z-index:60;background:#25D366;color:#fff;padding:.85rem 1.3rem;border-radius:999px;font-weight:700;box-shadow:0 12px 30px rgba(37,211,102,.45);display:inline-flex;align-items:center;gap:.55rem;transition:.2s}
+.float-call:hover{background:#1eb457;transform:translateY(-2px)}
+.foot-cs{display:flex;flex-direction:column;align-items:flex-start;gap:.6rem}
+.foot-cs .cs-img{background:#fff;border-radius:10px;padding:8px 12px;display:inline-block}
+.foot-cs .cs-img img{width:150px;height:auto;display:block}
+@media(max-width:720px){.foot-cs{align-items:flex-start}}
+</style>
+</head>
+<body><div class="kairos-disclaimer-top" style="background:#ffffff;color:#000000;font-size:12px;text-align:center;padding:8px 16px;line-height:1.5;position:relative;z-index:10000;">Demonstração de site criada pela Kairós TecnologIA, construída com os dados públicos da empresa achados na internet e de acesso restrito à ela. É apenas uma proposta e não representa o site oficial da empresa.</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#topo">
+      <span class="mark"><img src="data:image/jpeg;base64,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" alt="Logo Depósito Venda Nova"></span>
+      <span><b>Depósito Venda Nova</b><span>Materiais de Construção</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#produtos">Produtos</a>
+      <a href="#loja">A Loja</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#local">Localização</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="nav-phone">(31) 3495-2064</span>
+      <a class="btn btn-cta" href="https://wa.me/553134952064?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Dep%C3%B3sito%20Venda%20Nova%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">Venda Nova · Belo Horizonte</p>
+      <h1>Tudo o que você precisa, <span class="hl">da fundação à pintura!</span></h1>
+      <p class="sub">Atendimento na cidade grande com jeito de interior!</p>
+      <div class="hero-cta">
+        <a class="btn btn-cta" href="https://wa.me/553134952064?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Dep%C3%B3sito%20Venda%20Nova%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
+        <a class="btn btn-ghost" href="#local">📍 Como chegar</a>
+      </div>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <b>4,8</b><small>· 240 avaliações no Google</small>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlXIpdQb67IdB8ZAI4vGf-_DOfWZpsnTOhSD1-UFquBZWZMa8IjFjsAvEcWOqnW7_tA2mwO0qaK58BFAEHX7kbwjzinVWLtVQ49NoLvQqW-Ft__KeMNBuyT2h-7pxUJ022kcoZR1AleOis=w1200-h900-k-no" alt="Fachada do Depósito Venda Nova">
+      <div class="hero-badge">Referência em Venda Nova há anos</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap strip-in">
+    <span>🕗 Seg a Sex 07h–18h</span>
+    <span>🗓️ Sábado 07h–13h</span>
+    <span>🚚 Entrega de material</span>
+    <span>🧱 Da obra ao acabamento</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="produtos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">O que você encontra aqui</p>
+      <h2>Um depósito completo para a sua obra</h2>
+      <p>Do básico da construção ao acabamento final — tudo no mesmo lugar, com quem entende do assunto.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod"><div class="ic">🧱</div><h3>Tijolos & Blocos</h3><p>Tijolos, blocos e o material que ergue a sua obra.</p></div>
+      <div class="prod"><div class="ic">🪨</div><h3>Areia & Brita</h3><p>Areia, brita e agregados para fundação e concreto.</p></div>
+      <div class="prod"><div class="ic">🏗️</div><h3>Cimento & Argamassa</h3><p>Cimento, argamassa e tudo para estrutura e assentamento.</p></div>
+      <div class="prod"><div class="ic">🔧</div><h3>Ferramentas</h3><p>Chaves, ferramentas manuais e acessórios das melhores marcas.</p></div>
+      <div class="prod"><div class="ic">🎨</div><h3>Tintas & Pincéis</h3><p>Tintas, pincéis, rolos e tudo para o acabamento e a pintura.</p></div>
+      <div class="prod"><div class="ic">🔩</div><h3>Pregos, Parafusos & Fixação</h3><p>Pregos, parafusos, buchas e material de fixação a granel.</p></div>
+      <div class="prod"><div class="ic">💡</div><h3>Elétrica & Hidráulica</h3><p>Material elétrico e hidráulico para instalações e reparos.</p></div>
+      <div class="prod"><div class="ic">📦</div><h3>Materiais em geral</h3><p>E muito mais: o que faltar para a sua obra, a gente tem.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDER -->
+<section class="slider-sec" id="loja">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Conheça a nossa loja</p>
+      <h2>Uma loja abastecida de verdade</h2>
+      <p>Veja um pouco do que te espera no Depósito Venda Nova.</p>
+    </div>
+    <div class="slider">
+      <div class="slides" id="slides">
+        <div class="slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlXIpdQb67IdB8ZAI4vGf-_DOfWZpsnTOhSD1-UFquBZWZMa8IjFjsAvEcWOqnW7_tA2mwO0qaK58BFAEHX7kbwjzinVWLtVQ49NoLvQqW-Ft__KeMNBuyT2h-7pxUJ022kcoZR1AleOis=w1200-h800-k-no" alt="Fachada da loja"><div class="cap">📍 Nossa fachada em Venda Nova, na Rua Dr. Álvaro Camargos</div></div>
+        <div class="slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmHFbT5zRgcnLr9515l1qryzXIdD98Qp_Tr-mPqxyfOPbSIwcETpRtGyuWrHb38BT85hG1HV-rS4ziv2Bt2wgJaRY1ex578Ym1uLFODTzYe3TGL2s8-KZGwNtUCECFohCUa9cwvcEYB42A2=w1200-h800-k-no" alt="Interior da loja e atendimento"><div class="cap">🛒 Loja abastecida e atendimento pra te ajudar de perto</div></div>
+        <div class="slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWks5iO07jhe69PoNhMj96rILZ9fpB5iKzza6tQnvsbY5PeyefmpFVTqnrrvA_XH3NmCWrVXD7c3nzfc1e_HBTlojDPvZ3nAY6opuCsG0O2YU4lFP7ZlK1YI2HoaP3l56xyErNJqalaWWgU=w1200-h800-k-no" alt="Ferramentas"><div class="cap">🔧 Ferramentas das melhores marcas</div></div>
+        <div class="slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnpmfjkHHAJUcFPxWpCs4eFyIaW_mFb20OBTlufjjH9Um6F9uYU5ycKfhm92afLZsoI6fkUvv715DJPLM2EreJ6TRIFIF44PZ7Y0lscKcRpsuIxx3gepmEV8QZklkD6AhtFbC0iv36ngoLu=w1200-h800-k-no" alt="Tintas e pincéis"><div class="cap">🎨 Tintas, pincéis e tudo para a pintura</div></div>
+        <div class="slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnz1wbo5n9J8DBoOLYcXx6pTJKBT3NX2DH2LZd1H_2aYS9JhO3-WhXPRPTgkBrlivbkmy3Ge_shXDHSrLgLqTCzi8B7b38Sk5Bf7fs3x6MYWqC1JqvYfcub9bs3bLHFnx608TReVZVXfNbE=w1200-h800-k-no" alt="Pregos e parafusos"><div class="cap">🔩 Pregos, parafusos e fixação para qualquer serviço</div></div>
+      </div>
+      <button class="s-arrow prev" onclick="move(-1)" aria-label="Anterior">‹</button>
+      <button class="s-arrow next" onclick="move(1)" aria-label="Próximo">›</button>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="sobre">
+  <div class="wrap about-grid">
+    <div>
+      <p class="kicker">Quem é o Depósito Venda Nova</p>
+      <h2>O jeito de interior no coração de Belo Horizonte</h2>
+      <p>Antigo Depósito das Pedrinhas, hoje Depósito Venda Nova é ponto de referência para quem constrói, reforma ou dá aquele acabamento. Aqui o cliente é gente, não número: você é atendido com calma, orientação de quem entende e o preço que cabe na obra.</p>
+      <div class="feats">
+        <div class="feat"><span class="fi">⭐</span><div><b>4,8 de nota no Google</b><small>São 240 avaliações de quem já comprou e voltou.</small></div></div>
+        <div class="feat"><span class="fi">🤝</span><div><b>Atendimento com jeito de interior</b><small>Perto, paciente e honesto — do primeiro tijolo à última demão.</small></div></div>
+        <div class="feat"><span class="fi">📦</span><div><b>Tudo em um só lugar</b><small>Da fundação à pintura, sem precisar rodar a cidade atrás de material.</small></div></div>
+      </div>
+    </div>
+    <div class="about-media">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmHFbT5zRgcnLr9515l1qryzXIdD98Qp_Tr-mPqxyfOPbSIwcETpRtGyuWrHb38BT85hG1HV-rS4ziv2Bt2wgJaRY1ex578Ym1uLFODTzYe3TGL2s8-KZGwNtUCECFohCUa9cwvcEYB42A2=w900-h1200-k-no" alt="Atendimento no Depósito Venda Nova">
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL -->
+<section id="local">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Localização & Contato</p>
+      <h2>Venha nos visitar</h2>
+      <p>Estamos na Rua Dr. Álvaro Camargos, em Santa Branca — Venda Nova, BH.</p>
+    </div>
+    <div class="local-grid">
+      <div class="info-card">
+        <div class="info-row"><span class="ir">📍</span><div><b>Endereço</b><span>Rua Dr. Álvaro Camargos, 1961 — Santa Branca, Belo Horizonte / MG · CEP 31565-413</span></div></div>
+        <div class="info-row"><span class="ir">🕗</span><div><b>Horário de funcionamento</b><span>Segunda a sexta: 07h00 às 18h00 · Sábado: 07h00 às 13h00</span></div></div>
+        <div class="info-row"><span class="ir">💬</span><div><b>WhatsApp</b><span>(31) 3495-2064</span></div></div>
+        <div class="info-row"><span class="ir">📞</span><div><b>Telefone</b><span>(31) 3457-4702</span></div></div>
+        <a class="btn btn-wa" href="https://wa.me/553134952064?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Dep%C3%B3sito%20Venda%20Nova%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
+        <a class="btn btn-navy" href="https://maps.app.goo.gl/zfysrKJFiGei9ce28" target="_blank" rel="noopener" style="margin-top:.7rem">Traçar rota no Google Maps</a>
+      </div>
+      <div class="map">
+        <iframe title="Mapa Depósito Venda Nova" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Dep%C3%B3sito%20Venda%20Nova%2C%20Rua%20Dr.%20%C3%81lvaro%20Camargos%2C%201961%2C%20Belo%20Horizonte&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="mark"><img src="data:image/jpeg;base64,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" alt="Logo"></span><b>Depósito Venda Nova</b></div>
+        <p>Materiais de construção em Venda Nova, BH. Da fundação à pintura, com atendimento de verdade.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/553134952064?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Dep%C3%B3sito%20Venda%20Nova." target="_blank" rel="noopener">💬 WhatsApp (31) 3495-2064</a></li>
+          <li><a href="tel:+553134574702">📞 (31) 3457-4702</a></li>
+        </ul>
+        <h4 style="margin-top:1.3rem">Horário</h4>
+        <ul>
+          <li>Seg a Sex: 07h–18h</li>
+          <li>Sábado: 07h–13h</li>
+        </ul>
+      </div>
+      <div class="foot-cs">
+        <h4>Rede</h4>
+        <span class="cs-img"><img src="data:image/jpeg;base64,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" alt="Rede ConstruSuper - Material de Construção"></span>
+      </div>
+    </div>
+    <div class="copy">© 2026 Depósito Venda Nova · Rua Dr. Álvaro Camargos, 1961 — Belo Horizonte / MG</div>
+  </div>
+</footer><div class="kairos-disclaimer-bottom" style="background:#ffffff;color:#000000;font-size:12px;text-align:center;padding:8px 16px;line-height:1.5;position:relative;z-index:10000;">Demonstração de site criada pela Kairós TecnologIA, construída com os dados públicos da empresa achados na internet e de acesso restrito à ela. É apenas uma proposta e não representa o site oficial da empresa.</div><button id="kairosTopoBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo" title="Voltar ao topo" style="position:fixed;bottom:16px;left:50%;transform:translateX(-50%);width:40px;height:40px;border:none;border-radius:50%;background:var(--pri,var(--accent,var(--primary,var(--brand,var(--acc,var(--dark,#222))))));color:#fff;font-size:16px;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);display:none;align-items:center;justify-content:center;z-index:9999;transition:opacity .2s;font-family:inherit;">▲</button><script>(function(){var b=document.getElementById("kairosTopoBtn");if(b){window.addEventListener("scroll",function(){b.style.display=window.scrollY>300?"flex":"none";});}})();</script>
+
+<a class="float-call" href="tel:+553134574702">📞 Ligar</a>
+
+<script>
+const slides=document.getElementById('slides');
+const total=slides.children.length;
+const dotsBox=document.getElementById('dots');
+let idx=0;
+for(let i=0;i<total;i++){const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.onclick=()=>go(i);dotsBox.appendChild(b);}
+const dots=[...dotsBox.children];
+function render(){slides.style.transform='translateX('+(-idx*100)+'%)';dots.forEach((d,i)=>d.classList.toggle('active',i===idx));}
+function go(i){idx=(i+total)%total;render();}
+function move(d){go(idx+d);}
+window.move=move;
+let timer=setInterval(()=>move(1),5000);
+slides.parentElement.addEventListener('mouseenter',()=>clearInterval(timer));
+slides.parentElement.addEventListener('mouseleave',()=>timer=setInterval(()=>move(1),5000));
+</script>
+</body>
+</html>

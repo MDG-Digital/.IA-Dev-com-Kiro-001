@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alfa Car — Auto Mecânica em Venda Nova</title>
+<meta name="description" content="Alfa Car: Auto Mecânica em Venda Nova · Belo Horizonte/MG. Nota 4,8 no Google com 96 avaliações. Ligar agora.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#7c3aed;--accent2:#4c1d95;--dark:#14101c;--ink:#1a1c20;--muted:#5c6270;--bg:#faf8f5;--card:#ffffff;--line:#ece7df}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.12;font-weight:600}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#fff;padding:15px 26px;border-radius:13px;font-weight:600;font-size:clamp(15px,2.2vw,16px);transition:.2s;box-shadow:0 8px 24px -8px var(--accent)}
+.btn:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);box-shadow:none}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.kick{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+/* HERO */
+.hero{position:relative;background:linear-gradient(150deg,var(--dark),#0a0b0d);color:#fff;padding:clamp(40px,7vw,72px) 0 clamp(52px,8vw,88px);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-8%;top:-20%;width:520px;height:520px;background:radial-gradient(circle,var(--accent) 0,transparent 62%);opacity:.28;pointer-events:none}
+.hero .kick{color:#fff;opacity:.85}
+.hero h1{font-size:clamp(32px,6.2vw,58px);font-weight:700;margin:16px 0 18px;max-width:16ch}
+.hero p.lead{font-size:clamp(16px,2.6vw,20px);color:#d8dce4;max-width:52ch;margin-bottom:30px}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero .micro{font-size:13.5px;color:#aeb6c4;margin-top:14px;display:flex;align-items:center;gap:8px}
+.rating-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:10px 16px;border-radius:12px;margin-top:26px}
+.rating-badge b{font-size:20px;font-family:'Fraunces',serif}
+.stars{color:#ffc857;letter-spacing:2px}
+/* SECTION */
+section{padding:clamp(52px,8vw,92px) 0}
+.sec-head{max-width:60ch;margin-bottom:clamp(28px,4vw,44px)}
+.sec-head h2{font-size:clamp(26px,4.4vw,40px);margin:12px 0 10px}
+.sec-head p{color:var(--muted);font-size:clamp(15px,2.3vw,17px)}
+/* PROVA */
+.prova{background:#fff}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.quote{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:24px}
+.quote .stars{font-size:15px}
+.quote p{font-size:15.5px;margin-top:10px;color:#33363d}
+.quote span{display:block;margin-top:12px;font-size:13px;color:var(--muted);font-weight:600}
+/* SERVIÇOS */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.2s;display:flex;flex-direction:column;gap:10px}
+.svc:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 14px 30px -18px var(--accent)}
+.svc .ico{width:42px;height:42px;border-radius:11px;background:color-mix(in srgb,var(--accent) 14%,#fff);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px}
+.svc h3{font-size:18px}
+.svc a.more{margin-top:auto;color:var(--accent);font-weight:600;font-size:14px}
+/* SOBRE */
+.sobre{background:var(--dark);color:#fff}
+.sobre .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,56px);align-items:center}
+.sobre h2{font-size:clamp(26px,4.4vw,40px);margin-bottom:16px}
+.sobre p{color:#cfd4de;font-size:clamp(15px,2.3vw,17px);margin-bottom:14px}
+.sobre .facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:22px}
+.sobre .facts div b{font-family:'Fraunces',serif;font-size:30px;display:block;color:#fff}
+.sobre .facts div span{font-size:13px;color:#aeb6c4}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gal img{width:100%;height:100%;min-height:120px;object-fit:cover;border-radius:14px;display:block;background:#0a0b0d;cursor:pointer}
+.gal img:first-child{grid-column:1/-1;min-height:170px}
+/* LOCAL */
+.local .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,40px)}
+.local iframe{width:100%;height:100%;min-height:300px;border:0;border-radius:16px;filter:grayscale(.2)}
+.info-row{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.info-row .ico{color:var(--accent);font-size:19px;margin-top:2px}
+.info-row b{display:block;font-size:15px}
+.info-row span{color:var(--muted);font-size:14.5px}
+.info-row a{color:var(--accent);font-weight:600}
+/* FOOTER */
+footer{background:#0a0b0d;color:#cfd4de;padding:44px 0;text-align:center}
+footer .fn{font-family:'Fraunces',serif;font-size:22px;color:#fff;margin-bottom:8px}
+footer .sm{font-size:13px;color:#7a828f;margin-top:16px}
+/* FLOAT */
+.float{position:fixed;right:18px;bottom:18px;z-index:900;background:var(--accent);color:#fff;padding:14px 20px;border-radius:50px;font-weight:600;box-shadow:0 10px 30px -6px var(--accent);display:inline-flex;gap:9px;align-items:center;font-size:15px;transition:.2s}
+.float:hover{background:var(--accent2);transform:scale(1.04)}
+@media(max-width:760px){.sobre .grid,.local .grid{grid-template-columns:1fr}.local iframe{min-height:240px;order:2}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kick">Auto Mecânica · Venda Nova · Belo Horizonte/MG</div>
+    <h1>Funcionários capacitados e um serviço que vale a pena.</h1>
+    <p class="lead">96 avaliações no Google construídas em confiança: profissionais competentes, atendimento acolhedor e um carro que só volta pra revisão.</p>
+    <div class="cta-row">
+      <a class="btn" href="tel:+553134513645">Ligar agora →</a>
+      <a class="btn ghost" href="#servicos">Ver serviços</a>
+    </div>
+    <div class="micro">● atendimento pelo telefone</div>
+    <div class="rating-badge"><span class="stars">★★★★★</span><b>4,8</b><span style="color:#aeb6c4;font-size:14px">· 96 avaliações no Google</span></div>
+  </div>
+</header>
+
+<section class="prova">
+  <div class="wrap">
+    <div class="sec-head"><div class="kick">Prova social</div><h2>Quem confia, indica.</h2><p>Avaliações reais de clientes no Google — nota 4,8 com 96 avaliações.</p></div>
+    <div class="quotes"><div class="quote"><span class="stars">★★★★★</span><p>“Lugar top, funcionários capacitados — só levo meu carro lá!”</p><span>— Cliente no Google</span></div><div class="quote"><span class="stars">★★★★★</span><p>“Oficina muito boa, e o preço vale a pena.”</p><span>— Cliente no Google</span></div><div class="quote"><span class="stars">★★★★★</span><p>“Serviço nota 10, profissionais competentes e de alto gabarito.”</p><span>— Cliente no Google</span></div></div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head"><div class="kick">O que fazemos</div><h2>No cuidado do seu carro, do começo ao fim.</h2><p>Toque em um serviço e fale direto com a gente para um orçamento sem compromisso.</p></div>
+    <div class="svc-grid"><div class="svc"><div class="ico">●</div><h3>Manutenção preventiva e revisão</h3><a class="more" href="tel:+553134513645">Pedir orçamento →</a></div><div class="svc"><div class="ico">●</div><h3>Freios</h3><a class="more" href="tel:+553134513645">Pedir orçamento →</a></div><div class="svc"><div class="ico">●</div><h3>Suspensão e direção</h3><a class="more" href="tel:+553134513645">Pedir orçamento →</a></div><div class="svc"><div class="ico">●</div><h3>Motor e injeção eletrônica</h3><a class="more" href="tel:+553134513645">Pedir orçamento →</a></div><div class="svc"><div class="ico">●</div><h3>Troca de óleo e filtros</h3><a class="more" href="tel:+553134513645">Pedir orçamento →</a></div><div class="svc"><div class="ico">●</div><h3>Diagnóstico eletrônico</h3><a class="more" href="tel:+553134513645">Pedir orçamento →</a></div></div>
+  </div>
+</section>
+
+<section class="sobre">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="kick">Sobre nós</div>
+        <h2>Alfa Car</h2>
+        <p>A Alfa Car, com o Sr. Romeu à frente, é a oficina de quem não troca de mecânico. Equipe capacitada, serviço nota 10 e um atendimento que faz o cliente se sentir bem cuidado — do carro e da conversa.</p>
+        <div class="facts">
+          <div><b>4,8★</b><span>nota no Google</span></div>
+          <div><b>96</b><span>avaliações reais</span></div>
+        </div>
+        <div style="margin-top:26px"><a class="btn" href="tel:+553134513645">Ligar agora →</a></div>
+      </div>
+      <div class="gal"><img src="data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20192%20148%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20width%3D%22192%22%20height%3D%22148%22%20fill%3D%22%237c3aed0f%22/%3E%3Cpath%20d%3D%22M32%20108V70l64-30%2064%2030v38%22%20fill%3D%22none%22%20stroke%3D%22%237c3aed%22%20stroke-width%3D%225%22/%3E%3Crect%20x%3D%2252%22%20y%3D%2274%22%20width%3D%2288%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22none%22%20stroke%3D%22%237c3aed%22%20stroke-width%3D%225%22/%3E%3Cline%20x1%3D%2252%22%20y1%3D%2290%22%20x2%3D%22140%22%20y2%3D%2290%22%20stroke%3D%22%237c3aed%22%20stroke-width%3D%224%22/%3E%3C/svg%3E" alt="Alfa Car — estrutura"><img src="data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20192%20148%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20width%3D%22192%22%20height%3D%22148%22%20fill%3D%22%237c3aed0f%22/%3E%3Cpath%20d%3D%22M120%2052a22%2022%200%200%201-30%2026L60%20108l-14-14%2030-30A22%2022%200%200%201%20102%2034l-14%2014%2012%2012%2014-14a22%2022%200%200%201%206%206z%22%20fill%3D%22none%22%20stroke%3D%22%237c3aed%22%20stroke-width%3D%225%22/%3E%3C/svg%3E" alt="Alfa Car — serviços"><img src="data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20192%20148%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20width%3D%22192%22%20height%3D%22148%22%20fill%3D%22%237c3aed0f%22/%3E%3Ccircle%20cx%3D%2296%22%20cy%3D%2274%22%20r%3D%2224%22%20fill%3D%22none%22%20stroke%3D%22%237c3aed%22%20stroke-width%3D%225%22/%3E%3Ccircle%20cx%3D%2296%22%20cy%3D%2274%22%20r%3D%229%22%20fill%3D%22%237c3aed%22/%3E%3C/svg%3E" alt="Alfa Car — equipe"></div>
+    </div>
+  </div>
+</section>
+
+<section class="local">
+  <div class="wrap">
+    <div class="sec-head"><div class="kick">Onde estamos</div><h2>Venha nos visitar.</h2></div>
+    <div class="grid">
+      <iframe loading="lazy" src="https://maps.google.com/maps?q=R.%20Severino%20Lara%2C%20398%20%E2%80%94%20Venda%20Nova%2C%20Belo%20Horizonte/MG&z=16&output=embed" title="Mapa"></iframe>
+      <div>
+        <div class="info-row"><span class="ico">📍</span><div><b>Endereço</b><span>R. Severino Lara, 398 — Venda Nova, Belo Horizonte/MG</span></div></div>
+        <div class="info-row"><span class="ico">🕒</span><div><b>Horário</b><span>Segunda a sexta, 08h às 18h</span></div></div>
+        <div class="info-row"><span class="ico">📞</span><div><b>Contato</b><span><a href="tel:+553134513645">(31) 3451-3645</a></span></div></div>
+        
+        <div style="margin-top:22px"><a class="btn" href="tel:+553134513645">Ligar agora →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fn">Alfa Car</div>
+    <div>Auto Mecânica · Venda Nova · Belo Horizonte/MG</div>
+    <div class="sm">Página desenvolvida por Kairós TecnologIA · soluções com IA</div>
+  </div>
+</footer>
+<a class="float" href="tel:+553134513645">Ligar</a>
+</body>
+</html>

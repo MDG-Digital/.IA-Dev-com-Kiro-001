@@ -1,0 +1,44 @@
+# ==== Seguranca (NUNCA versionar) ====
+# Config com senha da Locaweb (inclui backups com nomes variados)
+**/prospector-config.json
+**/prospector-config*.json
+
+# Credenciais e configs sensiveis
+.env
+*.env
+config.local.*
+credentials.json
+*.key
+
+# Plugin tem repositorio proprio - backup/PR por fora
+001-Prospector de Sites/PROSPECTOR-DE-SITES/
+
+# ==== Python ====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+
+# ==== Bancos de dados locais ====
+*.sqlite
+*.sqlite3
+*.db
+
+# ==== Sistema operacional ====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==== Logs e temporarios ====
+*.log
+*.tmp
+*.bak
+**/*.bak-*
+**/_teste-*.txt
+**/~$*
