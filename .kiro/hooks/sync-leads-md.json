@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Sincronizar leads.md com prospector.db",
+      "trigger": "SessionStart",
+      "description": "No inicio de cada sessao, regenera o leads.md a partir do prospector.db (fonte da verdade) apenas se o banco for mais novo que o md. O leads.md e um artefato derivado; nunca editar a mao.",
+      "action": {
+        "type": "command",
+        "command": "python \"001-Prospector-de-Sites/Clientes/gerar-leads-md.py\" --quiet",
+        "timeout": 30
+      }
+    }
+  ]
+}

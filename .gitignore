@@ -14,7 +14,7 @@ credentials.json
 .kiro/settings/mcp.json
 
 # Plugin tem repositorio proprio - backup/PR por fora
-001-Prospector de Sites/PROSPECTOR-DE-SITES/
+001-Prospector-de-Sites/PROSPECTOR-DE-SITES/
 
 # ==== Python ====
 __pycache__/
