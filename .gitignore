@@ -10,6 +10,9 @@ config.local.*
 credentials.json
 *.key
 
+# Config de MCP local (pode conter caminhos/credenciais da maquina)
+.kiro/settings/mcp.json
+
 # Plugin tem repositorio proprio - backup/PR por fora
 001-Prospector de Sites/PROSPECTOR-DE-SITES/
 
